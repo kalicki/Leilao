@@ -2,6 +2,8 @@
 ### Java template
 # Compiled class file
 *.class
+
+# IntelliJ
 /out/
 
 # Log file
