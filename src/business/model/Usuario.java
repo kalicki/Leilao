@@ -1,65 +1,83 @@
 package business.model;
 
-public abstract class Usuario {
-	//s nome, cpf ou cnpj e endere�o de e-mail.
-	String nome, cpf, nomeRua, email;
-	int numeroResidencia;
-	
-	public Usuario(String nome, String cpf, String nomeRua, String email,
-	int numeroResidencia){
+/**
+ *
+ * @author Kalicki
+ */
+public class Usuario {
+
+	private String cpfCnpj;
+	private UsuarioTipo usuarioTipo;
+	private String nome;
+	private String email;
+	private String senha;
+	private String enderecoRua;
+	private Integer enderecoNumero;
+
+	public Usuario() {}
+
+	public Usuario(String cpfCnpj, UsuarioTipo usuarioTipo, String nome, String email, String senha, String enderecoRua, Integer enderecoNumero) {
+		this.cpfCnpj = cpfCnpj;
 		this.nome = nome;
-		this.cpf = cpf;
-		this.nomeRua = nomeRua;
 		this.email = email;
-		this.numeroResidencia = numeroResidencia;
-		
+		this.senha = senha;
+		this.enderecoRua = enderecoRua;
+		this.enderecoNumero = enderecoNumero;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public String getCpfCnpj() {
+		return cpfCnpj;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setCpfCnpj(String cpfCnpj) {
+		this.cpfCnpj = cpfCnpj;
 	}
 
-	public void setNomeRua(String nomeRua) {
-		this.nomeRua = nomeRua;
+	public UsuarioTipo getUsuarioTipo() {
+		return usuarioTipo;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public void setNumeroResidencia(int numeroResidencia) {
-		this.numeroResidencia = numeroResidencia;
+	public void setUsuarioTipo(UsuarioTipo usuarioTipo) {
+		this.usuarioTipo = usuarioTipo;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public String getCpf() {
-		return cpf;
-	}
-
-	public String getNomeRua() {
-		return nomeRua;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getEmail() {
 		return email;
 	}
 
-	public int getNumeroResidencia() {
-		return numeroResidencia;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	@Override
-	public String toString() {
-		return "Usuario [nome=" + nome + ", cpf=" + cpf + ", nomeRua=" + nomeRua + ", email=" + email
-				+ ", numeroResidencia=" + numeroResidencia + "]";
+	public String getSenha() {
+		return senha;
 	}
-	
-	
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public String getEnderecoRua() {
+		return enderecoRua;
+	}
+
+	public void setEnderecoNumero(Integer enderecoNumero) {
+		this.enderecoNumero = enderecoNumero;
+	}
+
+	public Integer getEnderecoNumero() {
+		return enderecoNumero;
+	}
+
+	public void setEnderecoRua(String enderecoRua) {
+		this.enderecoRua = enderecoRua;
+	}
 }
