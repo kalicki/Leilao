@@ -6,7 +6,7 @@ import java.util.List;
 /**
  *
  * @author Kalicki
- */
+ */;
 public interface UsuarioDAO {
   Usuario criar(Usuario Usuario) throws DAOException;
 
