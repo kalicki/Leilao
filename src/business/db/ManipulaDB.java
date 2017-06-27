@@ -1,5 +1,7 @@
 package business.db;
 
+import business.model.UsuarioTipo;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,27 +9,29 @@ import java.sql.Statement;
 
 public class ManipulaDB {
 
-    public static void selectAllTableUsuario(Connection connection) throws SQLException {
+
+
+    public static void selectAll(Connection connection) throws SQLException {
         String sql = "SELECT * " + "FROM usuario";
         Statement statement = connection.createStatement();
         ResultSet rs = statement.executeQuery(sql);
 
         while (rs.next()) {
-            int tipo = rs.getInt("tipo");
+            String cpfCnpj = rs.getString("cpfCnpj");
             String nome = rs.getString("nome");
-            String cpf = rs.getString("cpf");
-            String nomeRua = rs.getString("nomeRua");
             String email = rs.getString("email");
-            String numeroResidencia = rs.getString("numeroResidencia");
-            System.out.println(tipo + "\t" + nome + "\t" + nomeRua + "\t" + email + "\t" + numeroResidencia);
+            String senha = rs.getString("senha");
+            String enderecoRua = rs.getString("enderecoRua");
+            int enderecoNumero = rs.getInt("enderecoNumero");
+            System.out.println(cpfCnpj + "\t" + nome + "\t" + email + "\t" + email + "\t" + senha + "\t" + enderecoRua + "\t" + enderecoNumero);
         }
         statement.close();
         rs.close();
     }
 
-    public static boolean insert(Connection connection, int tipo, String nome, String cpf, String nomeRua, String email, String numeroResidencia) throws SQLException{
-        String sql = "INSERT INTO usuario (tipo, nome, cpf, nomeRua, email, numeroResidencia) " +
-                "VALUES (seq_filmes.nextval, " + tipo + ", '" + nome + ", " + cpf + ", " + nomeRua + ", " + email + ", " + numeroResidencia + "')";
+    public static boolean insert(Connection connection, String cpfCnpj, UsuarioTipo usuarioTipo, String nome, String email, String senha, String enderecoRua, Integer enderecoNumero) throws SQLException{
+        String sql = "INSERT INTO usuario (cpfCnpj, nome, email, senha, enderecoRua, enderecoNumero) " +
+                "VALUES (seq_val.nextval, " + cpfCnpj + ", '" + nome + ", " + email + ", " + senha + ", " + enderecoRua + ", " + enderecoNumero + "')";
 
         Statement statement = connection.createStatement();
         int rowCount = statement.executeUpdate(sql);
@@ -37,4 +41,61 @@ public class ManipulaDB {
         return rowCount == 1;
     }
 
+    public static void select(Connection connection, String cpfCnpj) throws SQLException {
+        String sql = "SELECT * " + "FROM usuario " + "WHERE cpfCnpj = " + cpfCnpj;
+
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        while (rs.next()) {
+            //String cpfCnpj = rs.getString("cpfCnpj");
+            String nome = rs.getString("nome");
+            String email = rs.getString("email");
+            String senha = rs.getString("senha");
+            String enderecoRua = rs.getString("enderecoRua");
+            int enderecoNumero = rs.getInt("enderecoNumero");
+            System.out.println(cpfCnpj + "\t" + nome + "\t" + email + "\t" + email + "\t" + senha + "\t" + enderecoRua + "\t" + enderecoNumero);
+        }
+
+        statement.close();
+        rs.close();
+    }
+
+    public static boolean delete(Connection connection, String cpfCnpj) throws SQLException{
+        String sql = "DELETE FROM usuario " +
+                "WHERE cpfCnpj = " + cpfCnpj;
+
+        Statement statement = connection.createStatement();
+        int rowCount = statement.executeUpdate(sql);
+
+        // Row count is the number of affected registers. In this case,
+        // when equals to one means that a register was succesfully deleted.
+        return rowCount == 1;
+    }
+
+    /*
+    PRECISO SABER QUAIS ATRIBUTOS SERÃO ALTERADOS...
+    EXEMPLOS:
+
+    UPDATE usuario
+    SET nome = novo nome;
+
+    UPDATE usuario
+    SET senha = nova senha;
+    */
+
+    /*
+    public static boolean alter(Connection connection, String cpfCnpj) throws SQLException{
+        String sql = "UPDATE usuario " +
+                "WHERE cpfCnpj = " + cpfCnpj;
+
+        Statement statement = connection.createStatement();
+        int rowCount = statement.executeUpdate(sql);
+
+        // Row count is the number of affected registers. In this case,
+        // when equals to one means that a register was succesfully deleted.
+        return rowCount == 1;
+    }
+
+    */
 }
