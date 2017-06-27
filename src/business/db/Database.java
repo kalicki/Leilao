@@ -9,7 +9,7 @@ public class Database {
 
     }
 
-    public void DatabaseConnection() {
+    public Connection DatabaseConnection() {
 
         // Connect to database
         String hostName = "alphadb01";
@@ -51,10 +51,12 @@ public class Database {
                 }
             }
             */
+        return connection;
         }
+
         catch (Exception e) {
             e.printStackTrace();
         }
-
+    return null;
     }
 }

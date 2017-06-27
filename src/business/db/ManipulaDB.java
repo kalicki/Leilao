@@ -27,6 +27,8 @@ public class ManipulaDB {
         }
         statement.close();
         rs.close();
+
+
     }
 
     public static boolean insert(Connection connection, String cpfCnpj, UsuarioTipo usuarioTipo, String nome, String email, String senha, String enderecoRua, Integer enderecoNumero) throws SQLException{
@@ -57,6 +59,7 @@ public class ManipulaDB {
             System.out.println(cpfCnpj + "\t" + nome + "\t" + email + "\t" + email + "\t" + senha + "\t" + enderecoRua + "\t" + enderecoNumero);
         }
 
+
         statement.close();
         rs.close();
     }
@@ -73,19 +76,7 @@ public class ManipulaDB {
         return rowCount == 1;
     }
 
-    /*
-    PRECISO SABER QUAIS ATRIBUTOS SERÃO ALTERADOS...
-    EXEMPLOS:
-
-    UPDATE usuario
-    SET nome = novo nome;
-
-    UPDATE usuario
-    SET senha = nova senha;
-    */
-
-    /*
-    public static boolean alter(Connection connection, String cpfCnpj) throws SQLException{
+    public static boolean update(Connection connection, String cpfCnpj) throws SQLException{
         String sql = "UPDATE usuario " +
                 "WHERE cpfCnpj = " + cpfCnpj;
 
@@ -97,5 +88,4 @@ public class ManipulaDB {
         return rowCount == 1;
     }
 
-    */
 }
