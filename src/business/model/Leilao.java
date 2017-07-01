@@ -18,7 +18,6 @@ public class Leilao {
 	private Usuario usuario;
 	private Lote lote;
 	private List<Lance> lances;
-	private Integer versao;
 
 	public Leilao() {
 	}
@@ -31,7 +30,6 @@ public class Leilao {
 		this.tempoTermino = tempoTermino;
 		this.preco = preco;
 		this.usuario = usuario;
-		this.versao = versao;
 	}
 
 	public Integer getCodigo() {
@@ -112,13 +110,5 @@ public class Leilao {
 
 	public void setLote(Lote lote) {
 		this.lote = lote;
-	}
-
-	public Integer getVersao() {
-		return versao;
-	}
-
-	public void setVersao(Integer versao) {
-		this.versao = versao;
 	}
 }

@@ -1,18 +1,28 @@
 package business.facade;
 
+import business.action.CategoriaAction;
+import business.action.LeilaoAction;
 import business.dao.CategoriaDAO;
 import business.dao.DAOException;
 import business.model.Categoria;
 import business.validator.ValidatorCategoria;
 
 public class FacadeCategoria {
-		private CategoriaDAO categoriaDao;
+	private CategoriaDAO dao;
+
+	public FacadeCategoria() throws Exception {
+		try {
+			dao = CategoriaAction.getInstance();
+		} catch (Exception e) {
+			throw new Exception("Falha de criaï¿½ï¿½o da fachada!", e);
+		}
+	}
 		
-	   protected void adicionarCategoria(Integer codigo, String descricao) throws DAOException{
-    	if(ValidatorCategoria.codigo(codigo)==false) throw new DAOException("Código inválido");
-    	if(ValidatorCategoria.descricao(descricao)==false) throw new DAOException("Descrição inválida");
-    	Categoria categoria = new Categoria(codigo, descricao);
-    	categoriaDao.criar(categoria);
-    	
-    }
+	 protected void adicionarCategoria(Integer codigo, String descricao) throws DAOException{
+		if(ValidatorCategoria.codigo(codigo)==false) throw new DAOException("Cï¿½digo invï¿½lido");
+		if(ValidatorCategoria.descricao(descricao)==false) throw new DAOException("Descriï¿½ï¿½o invï¿½lida");
+		Categoria categoria = new Categoria(codigo, descricao);
+		dao.criar(categoria);
+
+	}
 }
