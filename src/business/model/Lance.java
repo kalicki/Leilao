@@ -12,7 +12,6 @@ public class Lance {
     private Double valor;
     private Usuario usuario;
     private Leilao leilao;
-    private Integer versao;
 
     public Lance() {}
 
@@ -22,7 +21,6 @@ public class Lance {
         this.valor = valor;
         this.usuario = usuario;
         this.leilao = leilao;
-        this.versao = versao;
     }
 
     public Integer getCodigo() {
@@ -63,13 +61,5 @@ public class Lance {
 
     public void setLeilao(Leilao leilao) {
         this.leilao = leilao;
-    }
-
-    public Integer getVersao() {
-        return versao;
-    }
-
-    public void setVersao(Integer versao) {
-        this.versao = versao;
     }
 }

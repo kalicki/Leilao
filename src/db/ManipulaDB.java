@@ -1,4 +1,4 @@
-package business.db;
+package db;
 
 import business.model.UsuarioTipo;
 

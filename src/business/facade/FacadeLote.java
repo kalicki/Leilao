@@ -1,5 +1,8 @@
 package business.facade;
 
+import business.action.LoteAction;
+import business.action.ProdutoAction;
+import business.dao.ProdutoDAO;
 import java.util.List;
 
 import business.dao.DAOException;
@@ -12,14 +15,22 @@ import business.validator.ValidatorLote;
 import javafx.fxml.LoadException;
 
 public class FacadeLote {
-	private LoteDAO loteDao;
+	private LoteDAO dao;
+
+	public FacadeLote() throws Exception {
+		try {
+			dao = LoteAction.getInstance();
+		} catch (Exception e) {
+			throw new Exception("Falha de criaï¿½ï¿½o da fachada!", e);
+		}
+	}
 	
 	protected void adicioanarLote(Integer codigo, List<Produto> produto, Leilao leilao) throws DAOException {
-		if(ValidatorLote.codigo(codigo)==false) throw new DAOException("Código inválido");
-		if(ValidatorLote.leilao(leilao)== false) throw new DAOException("Leilão não pode ser null");
-		if(ValidatorLote.listaProdutos(produto)==false) throw new DAOException("Lista não pode ser null"); 
+		if(ValidatorLote.codigo(codigo)==false) throw new DAOException("Cï¿½digo invï¿½lido");
+		if(ValidatorLote.leilao(leilao)== false) throw new DAOException("Leilï¿½o nï¿½o pode ser null");
+		if(ValidatorLote.listaProdutos(produto)==false) throw new DAOException("Lista nï¿½o pode ser null"); 
 		Lote lote = new Lote(codigo,produto,leilao);
-		loteDao.criar(lote);
+		dao.criar(lote);
 		
 	}
 }

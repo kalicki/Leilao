@@ -1,11 +1,11 @@
 package gui;
 
+import business.facade.Facade;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import business.db.Database;
 
 public class App extends Application {
 
@@ -19,8 +19,12 @@ public class App extends Application {
 
 
     public static void main(String[] args) {
-        Database db = new Database();
-        db.DatabaseConnection();
+        Facade fachada = new Facade();
+        try {
+            fachada.obterConexao();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         launch(args);
     }
