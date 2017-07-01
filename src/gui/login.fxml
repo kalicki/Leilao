@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="544.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Login">
+    <children>
+        <GridPane alignment="CENTER" layoutX="121.0" layoutY="-4.0" prefHeight="364.0" prefWidth="302.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text fx:id="alertaLogin" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <JFXPasswordField fx:id="senhaLogin" labelFloat="true" promptText="Senha" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="usuarioLogin" labelFloat="true" promptText="CPF/CNPJ" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <JFXToggleButton text="Vendendor" toggleColor="#4059a9" toggleLineColor="#7c88ae" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Não tem conta?" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <JFXDialog overlayClose="false" GridPane.rowIndex="2" />
+            <JFXButton fx:id="entrarOnClick" buttonType="RAISED" minHeight="-Infinity" minWidth="-Infinity" onAction="#entrarOnClick" prefHeight="35.0" prefWidth="119.0" text="ENTRAR" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            </children>
+        </GridPane>
+    </children>
+</Pane>

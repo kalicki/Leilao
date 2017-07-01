@@ -1,0 +1,9 @@
+JFXButton {
+  -fx-background-color: #4059a9;
+  -fx-text-fill: #ffffff;
+  -fx-color-label-visible: #ffffff;
+}
+
+JFXButton:hover {
+  -fx-background-color: #3442a9;
+}
