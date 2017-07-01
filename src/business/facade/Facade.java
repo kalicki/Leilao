@@ -33,8 +33,8 @@ public class Facade {
 	private FacadeLote facadaLote;
 	private FacadeProduto facadeProduto;
 
-	public void obterConexao() throws Exception {
-		facadeDB.conectarDB();
+	public void iniciarDB() {
+		facadeDB.iniciarDB();
 	}
 
 	public void adicionarUsuario(String cpfCnpj, UsuarioTipo usuarioTipo, String nome, String email, String senha, String enderecoRua, Integer enderecoNumero) throws DAOException{

@@ -1,7 +1,7 @@
 package db;
 
+import business.action.UsuarioAction;
 import business.dao.DAOException;
-import java.rmi.server.ExportException;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -21,9 +21,17 @@ public class BancoDadosAction implements BancoDadosDAO {
   private static final String[] TABELAS = {"Lances", "Leiloes", "Produtos", "Categorias", "Usuarios"};
   private static Properties PROPRIEDADES = null;
   private Connection conexao = null;
+  private static BancoDadosAction aux;
+
+  public static BancoDadosAction getInstance() throws DAOException {
+    if (aux == null) {
+      aux = new BancoDadosAction();
+    }
+    return aux;
+  }
 
   @Override
-  public boolean obterConexao() throws DAOException {
+  public final Connection obterConexao() throws DAOException {
     if (PROPRIEDADES == null) {
       PROPRIEDADES = new Properties();
     }
@@ -49,20 +57,6 @@ public class BancoDadosAction implements BancoDadosDAO {
 
       System.out.println("Conexão Realizada! - Schema: " + conexao.getSchema());
 
-      // Verifica integridade do DB
-      boolean refazerDB = false;
-      for (String tabela: TABELAS) {
-        if (!tabelasExistem(tabela)) {
-          refazerDB = true;
-          break;
-        }
-      }
-      if (refazerDB) {
-        this.apagarBancoDados();
-        this.criarBancoDados();
-      }
-
-      return true;
     } catch (DAOException e) {
       throw new DAOException("Algo deu errado ' = ", e);
     } catch (ClassNotFoundException e) {
@@ -73,15 +67,29 @@ public class BancoDadosAction implements BancoDadosDAO {
       e.printStackTrace();
     }
 
-    return false;
+    return conexao;
   }
 
-  @Override
-  public void fecharConexao() throws DAOException {
+  public final void fecharConexao() throws DAOException {
     try {
       conexao.close();
     } catch (SQLException e) {
       e.printStackTrace();
+    }
+  }
+
+  public void iniciarDB() throws Exception {
+    // Verifica integridade do DB
+    boolean refazerDB = false;
+    for (String tabela: TABELAS) {
+      if (!tabelasExistem(tabela)) {
+        refazerDB = true;
+        break;
+      }
+    }
+    if (refazerDB) {
+      this.apagarBancoDados();
+      this.criarBancoDados();
     }
   }
 

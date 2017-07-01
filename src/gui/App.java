@@ -21,7 +21,7 @@ public class App extends Application {
     public static void main(String[] args) {
         Facade fachada = new Facade();
         try {
-            fachada.obterConexao();
+            fachada.iniciarDB();
         } catch (Exception e) {
             e.printStackTrace();
         }
