@@ -15,7 +15,7 @@ public interface CategoriaDAO {
 
   Categoria buscar(Integer codigo) throws DAOException;
 
-  Categoria atualizar(Categoria categoria) throws DAOException;
+  void atualizar(Categoria categoria) throws DAOException;
 
   Categoria remover(Categoria categoria) throws DAOException;
 
