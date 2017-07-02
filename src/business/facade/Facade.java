@@ -38,7 +38,7 @@ public class Facade {
 		facadeDB = new FacadeDB();
 	}
 
-	public void iniciarDB() {
+	public void iniciarDB() throws Exception {
 		facadeDB.iniciarDB();
 	}
 

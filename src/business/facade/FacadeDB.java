@@ -13,7 +13,7 @@ public class FacadeDB {
     }
   }
 
-  public void iniciarDB() {
-    dao.obterConexao();
+  public void iniciarDB() throws Exception {
+    dao.iniciarDB();
   }
 }

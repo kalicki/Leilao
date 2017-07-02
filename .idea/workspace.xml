@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Adicionado estrutura DAO">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/facade/Facade.java" afterPath="$PROJECT_DIR$/src/business/facade/Facade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/facade/FacadeDB.java" afterPath="$PROJECT_DIR$/src/business/facade/FacadeDB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/BancoDadosAction.java" afterPath="$PROJECT_DIR$/src/db/BancoDadosAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/config.properties" afterPath="$PROJECT_DIR$/src/db/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/App.java" afterPath="$PROJECT_DIR$/src/gui/App.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,6 +20,40 @@
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="leilao@alphadb01.database.windows.net" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="leilao@alphadb01.database.windows.net" type="e3449647:DbNodeDescriptor" />
+        <item name="leilao" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="leilao@alphadb01.database.windows.net" type="e3449647:DbNodeDescriptor" />
+        <item name="leilao" type="e3449647:DbNodeDescriptor" />
+        <item name="dbo" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="leilao@alphadb01.database.windows.net" type="e3449647:DbNodeDescriptor" />
+        <item name="leilao" type="e3449647:DbNodeDescriptor" />
+        <item name="dbo" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
@@ -63,60 +98,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BancoDadosAction.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BancoDadosAction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/db/BancoDadosAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+            <state relative-caret-position="475">
+              <caret line="116" column="99" lean-forward="false" selection-start-line="116" selection-start-column="99" selection-end-line="116" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1498956478000" expanded="true" signature="2891:3150" ph="CREATE TABLE... Lances" />
-                <marker date="1498956478000" expanded="true" signature="3179:3524" ph="CREATE TABLE... Leiloes" />
-                <marker date="1498956478000" expanded="true" signature="3553:3809" ph="CREATE TABLE... Produtos" />
-                <marker date="1498956478000" expanded="true" signature="3838:4010" ph="CREATE TABLE... Categorias" />
-                <marker date="1498956478000" expanded="true" signature="4038:4367" ph="CREATE TABLE... Usuarios" />
-                <marker date="1498956478000" expanded="true" signature="4396:4477" ph="ALTER TABLE Lances... " />
-                <marker date="1498956478000" expanded="true" signature="4506:4588" ph="ALTER TABLE Leiloes... " />
-                <marker date="1498956478000" expanded="true" signature="4617:4702" ph="ALTER TABLE Produtos... " />
-                <marker date="1498956478000" expanded="true" signature="5028:5045" ph="DROP TABLE L... " />
-                <marker date="1498956478000" expanded="true" signature="5073:5091" ph="DROP TABLE L... " />
-                <marker date="1498956478000" expanded="true" signature="5119:5138" ph="DROP TABLE P... " />
-                <marker date="1498956478000" expanded="true" signature="5166:5187" ph="DROP TABLE C... " />
-                <marker date="1498956478000" expanded="true" signature="5215:5234" ph="DROP TABLE U... " />
+                <marker date="1498975723000" expanded="true" signature="2799:3126" ph="CREATE TABLE... Usuarios" />
+                <marker date="1498975723000" expanded="true" signature="3258:3592" ph="CREATE TABLE... Leiloes" />
+                <marker date="1498975723000" expanded="true" signature="3723:3969" ph="CREATE TABLE... Lances" />
+                <marker date="1498975723000" expanded="true" signature="3723:3970" ph="CREATE TABLE... Lances" />
+                <marker date="1498975723000" expanded="true" signature="3723:3999" ph="CREATE TABLE... Lances" />
+                <marker date="1498975723000" expanded="true" signature="4134:4261" ph="CREATE TABLE... Categorias" />
+                <marker date="1498975723000" expanded="true" signature="4395:4637" ph="CREATE TABLE... Produtos" />
+                <marker date="1498975723000" expanded="true" signature="4967:4984" ph="DROP TABLE L... " />
+                <marker date="1498975723000" expanded="true" signature="5012:5030" ph="DROP TABLE L... " />
+                <marker date="1498975723000" expanded="true" signature="5058:5077" ph="DROP TABLE P... " />
+                <marker date="1498975723000" expanded="true" signature="5105:5126" ph="DROP TABLE C... " />
+                <marker date="1498975723000" expanded="true" signature="5154:5173" ph="DROP TABLE U... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LauncherImpl.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="362" column="0" lean-forward="false" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db/config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+            <state relative-caret-position="45">
+              <caret line="3" column="79" lean-forward="false" selection-start-line="3" selection-start-column="79" selection-end-line="3" selection-end-column="79" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BancoDadosDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/db/BancoDadosDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Facade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/facade/Facade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-              <folding>
-                <element signature="e#1147#1148#0" expanded="true" />
-                <element signature="e#1174#1175#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -136,9 +157,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="e#359#360#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,33 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Leilao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/model/Leilao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="26" column="19" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-              <folding>
-                <marker date="1498947422000" expanded="false" signature="2114:2117" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuarioAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/action/UsuarioAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -213,6 +210,7 @@
       <find>dbName</find>
       <find>getConnection()</find>
       <find>com.microsoft.sqlserver.jdbc.SQLServerDriver</find>
+      <find>codigo_usuario</find>
     </findStrings>
     <replaceStrings>
       <replace>tipo</replace>
@@ -247,7 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.classpath" />
         <option value="$PROJECT_DIR$/src/gui/Main.java" />
         <option value="$PROJECT_DIR$/src/business/model/LeilaoDemanda.java" />
         <option value="$PROJECT_DIR$/src/business/model/LeilaoOferta.java" />
@@ -293,11 +290,12 @@
         <option value="$PROJECT_DIR$/src/business/model/Leilao.java" />
         <option value="$PROJECT_DIR$/src/business/model/Lance.java" />
         <option value="$PROJECT_DIR$/src/db/BancoDadosDAO.java" />
+        <option value="$PROJECT_DIR$/src/gui/App.java" />
         <option value="$PROJECT_DIR$/src/business/facade/FacadeDB.java" />
         <option value="$PROJECT_DIR$/src/business/facade/Facade.java" />
-        <option value="$PROJECT_DIR$/src/gui/App.java" />
-        <option value="$PROJECT_DIR$/src/db/BancoDadosAction.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/283ef31f-f0ed-4550-8fc8-9061637c4276/console.sql" />
         <option value="$PROJECT_DIR$/src/db/config.properties" />
+        <option value="$PROJECT_DIR$/src/db/BancoDadosAction.java" />
       </list>
     </option>
   </component>
@@ -405,6 +403,7 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Azure (Microsoft)" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -556,7 +555,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50973000" />
+    <option name="totallyTimeSpent" value="62893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
@@ -570,12 +569,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24189526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24189526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917705" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27222222" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16041666" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -639,28 +639,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Leilao.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/LeilaoOferta.java" />
     <entry file="uml://JAVA/business.model.Leilao">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -933,37 +911,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/BancoDadosDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/facade/FacadeCategoria.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/facade/Facade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding>
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -976,44 +927,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://DATABASE/283ef31f-f0ed-4550-8fc8-9061637c4276">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>283ef31f-f0ed-4550-8fc8-9061637c4276</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="301.5" y="-4242.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/facade/Facade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/facade/FacadeDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#359#360#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/BancoDadosAction.java">
+    <entry file="file://$PROJECT_DIR$/src/db/BancoDadosDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1498956478000" expanded="true" signature="2891:3150" ph="CREATE TABLE... Lances" />
-            <marker date="1498956478000" expanded="true" signature="3179:3524" ph="CREATE TABLE... Leiloes" />
-            <marker date="1498956478000" expanded="true" signature="3553:3809" ph="CREATE TABLE... Produtos" />
-            <marker date="1498956478000" expanded="true" signature="3838:4010" ph="CREATE TABLE... Categorias" />
-            <marker date="1498956478000" expanded="true" signature="4038:4367" ph="CREATE TABLE... Usuarios" />
-            <marker date="1498956478000" expanded="true" signature="4396:4477" ph="ALTER TABLE Lances... " />
-            <marker date="1498956478000" expanded="true" signature="4506:4588" ph="ALTER TABLE Leiloes... " />
-            <marker date="1498956478000" expanded="true" signature="4617:4702" ph="ALTER TABLE Produtos... " />
-            <marker date="1498956478000" expanded="true" signature="5028:5045" ph="DROP TABLE L... " />
-            <marker date="1498956478000" expanded="true" signature="5073:5091" ph="DROP TABLE L... " />
-            <marker date="1498956478000" expanded="true" signature="5119:5138" ph="DROP TABLE P... " />
-            <marker date="1498956478000" expanded="true" signature="5166:5187" ph="DROP TABLE C... " />
-            <marker date="1498956478000" expanded="true" signature="5215:5234" ph="DROP TABLE U... " />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/283ef31f-f0ed-4550-8fc8-9061637c4276/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+        <state relative-caret-position="45">
+          <caret line="3" column="79" lean-forward="false" selection-start-line="3" selection-start-column="79" selection-end-line="3" selection-end-column="79" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/283ef31f-f0ed-4550-8fc8-9061637c4276.SCHEMA:leilao.dbo">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>283ef31f-f0ed-4550-8fc8-9061637c4276.SCHEMA:leilao.dbo</OriginalElement>
+          <nodes>
+            <node x="" y="">283ef31f-f0ed-4550-8fc8-9061637c4276.TABLE:leilao.dbo.Usuarios</node>
+            <node x="" y="">283ef31f-f0ed-4550-8fc8-9061637c4276.TABLE:leilao.dbo.BuildVersion</node>
+            <node x="" y="">283ef31f-f0ed-4550-8fc8-9061637c4276.TABLE:leilao.dbo.ErrorLog</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="235.5" y="195.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="362" column="0" lean-forward="false" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/BancoDadosAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="116" column="99" lean-forward="false" selection-start-line="116" selection-start-column="99" selection-end-line="116" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1498975723000" expanded="true" signature="2799:3126" ph="CREATE TABLE... Usuarios" />
+            <marker date="1498975723000" expanded="true" signature="3258:3592" ph="CREATE TABLE... Leiloes" />
+            <marker date="1498975723000" expanded="true" signature="3723:3969" ph="CREATE TABLE... Lances" />
+            <marker date="1498975723000" expanded="true" signature="3723:3970" ph="CREATE TABLE... Lances" />
+            <marker date="1498975723000" expanded="true" signature="3723:3999" ph="CREATE TABLE... Lances" />
+            <marker date="1498975723000" expanded="true" signature="4134:4261" ph="CREATE TABLE... Categorias" />
+            <marker date="1498975723000" expanded="true" signature="4395:4637" ph="CREATE TABLE... Produtos" />
+            <marker date="1498975723000" expanded="true" signature="4967:4984" ph="DROP TABLE L... " />
+            <marker date="1498975723000" expanded="true" signature="5012:5030" ph="DROP TABLE L... " />
+            <marker date="1498975723000" expanded="true" signature="5058:5077" ph="DROP TABLE P... " />
+            <marker date="1498975723000" expanded="true" signature="5105:5126" ph="DROP TABLE C... " />
+            <marker date="1498975723000" expanded="true" signature="5154:5173" ph="DROP TABLE U... " />
+          </folding>
         </state>
       </provider>
     </entry>
