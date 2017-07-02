@@ -25,24 +25,29 @@ public class App extends Application {
             Facade fachada = new Facade();
             fachada.iniciarDB();
 
-            CategoriaAction add = new CategoriaAction();
-            Categoria cat1 = new Categoria();
 
-            cat1.setDescricao("abacate");
-            add.criar(cat1);
+            CategoriaAction cat = new CategoriaAction();
 
-            Categoria a = add.buscar(1);
-            System.out.print(a.getDescricao());
+            Categoria categoriaAbcate = new Categoria();// Cria instancia do objeto
+            categoriaAbcate.setDescricao("abacate");    // Cria a descricao do Abacate
+            cat.criar(categoriaAbcate);                 // Cria no SQL a categoria
 
-            cat1.setDescricao("oi");
-            add.atualizar(cat1);
+            // Consulta objeto adcionado
+            Categoria buscaAbacate = cat.buscar(1);
+            System.out.print("buscou id 1:" + buscaAbacate.getDescricao());
 
-            Categoria a2 = add.buscar(1);
-            System.out.print(a.getDescricao());
+            // Atualiza descricao de Abacate para Laranja
+            categoriaAbcate.setDescricao("Laranja");
+            cat.atualizar(categoriaAbcate);
+            System.out.print("atualizou id 1:" + categoriaAbcate.getDescricao()); // Tem que mostrar laranja
 
-            add.remover(cat1);
-            Categoria a3 = add.buscar(2);
-            System.out.print(a.getDescricao());
+            Categoria a2 = cat.buscar(1);
+            System.out.print("atualizou buscou id 1:" + a2.getDescricao());
+
+            cat.remover(categoriaAbcate);
+            Categoria consultaAbacateRemovido = cat.buscar(1);
+            System.out.print("atualizou buscou id 1:" + consultaAbacateRemovido.getDescricao());
+
         } catch (Exception e) {
             e.printStackTrace();
         }

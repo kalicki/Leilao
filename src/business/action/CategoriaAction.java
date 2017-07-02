@@ -15,6 +15,7 @@ import db.BancoDadosAction;
 
 public class CategoriaAction implements CategoriaDAO {
 	private static CategoriaAction aux;
+  private static final String SQL_EXISTE_CATEGORIA = "SELECT codigo FROM Categorias WHERE descricao = ? COLLATE SQL_Latin1_General_CP1_CI_AS";
 
 	public static CategoriaAction getInstance() throws DAOException {
 		if (aux == null) {
@@ -25,14 +26,14 @@ public class CategoriaAction implements CategoriaDAO {
 
 	@Override
 	public Categoria criar(Categoria categoria) throws DAOException,SQLException {
-		if (categoria.getCodigo() != null) {
+	  if (categoria.getCodigo() != null) {
 			throw new IllegalArgumentException("Categoria criada, o codigo tem que ser null");
 		}
 
 		try (
 				Connection cone = BancoDadosAction.getInstance().obterConexao();
-				PreparedStatement stmt = cone.prepareStatement("INSERT INTO Categorias (descricao) VALUES (?)", PreparedStatement.RETURN_GENERATED_KEYS);
-		) {
+				PreparedStatement stmt = cone.prepareStatement("INSERT INTO Categorias (descricao) VALUES (?)", PreparedStatement.RETURN_GENERATED_KEYS)
+    ) {
 
 			stmt.setString(1, categoria.getDescricao());
 			int ret = stmt.executeUpdate();
@@ -61,23 +62,24 @@ public class CategoriaAction implements CategoriaDAO {
 
 	@Override
 	public Categoria buscar(Integer codigo) throws DAOException {
+    Categoria cat = null;
+
 		try {
 			Connection cone= BancoDadosAction.getInstance().obterConexao();
 			PreparedStatement stmt = cone.prepareStatement("SELECT * FROM Categorias WHERE codigo = ?");
 
 			stmt.setInt(1, codigo);
-			ResultSet resultado = stmt.executeQuery();
+      ResultSet resultado = stmt.executeQuery();
 
-			Categoria cat = null;
-
-			if(resultado.next()) {
+			if (resultado != null) {
+        System.out.println("teste");
 				cat = new Categoria(Integer.parseInt(resultado.getString("codigo")), resultado.getString("descricao"));
 			}
-
-			return cat;
 		} catch (SQLException ex) {
 			throw new DAOException("Falha ao buscar.", ex);
 		}
+
+    return cat;
 	}
 
 	@Override
@@ -90,17 +92,17 @@ public class CategoriaAction implements CategoriaDAO {
 				Connection cone= BancoDadosAction.getInstance().obterConexao();
 				PreparedStatement stmt = cone.prepareStatement(
 						"UPDATE Categorias set descricao = ? WHERE codigo = ?"
-				);
-		) {
+				)
+    ) {
+
+			stmt.setString(1, categoria.getDescricao());
+			stmt.setInt(2, categoria.getCodigo());
 
 			int affectedRows = stmt.executeUpdate();
 			if (affectedRows == 0) {
 				throw new DAOException("falha ao atualizar.");
 			}
 
-			stmt.setString(1, categoria.getDescricao());
-			stmt.setInt(2, categoria.getCodigo());
-			ResultSet resultado = stmt.executeQuery();
 
 		} catch (SQLException ex) {
 			throw new DAOException("Falha ao atualizar.", ex);
@@ -148,10 +150,32 @@ public class CategoriaAction implements CategoriaDAO {
 			return lista;
 		} catch (SQLException ex) {
 			throw new DAOException("Falha ao buscar.", ex);
-		}
+    } finally {
+      BancoDadosAction.getInstance().fecharConexao();
+    }
 	}
 
-	public static Categoria retornaCategoria(ResultSet resultSet) throws SQLException {
+  public boolean existeCategoria(String descricao) throws DAOException {
+    boolean existeCategoria = false;
+    try {
+      Connection cone = BancoDadosAction.getInstance().obterConexao();
+      PreparedStatement stmt = cone.prepareStatement(SQL_EXISTE_CATEGORIA);
+
+      stmt.setString(1, new String(descricao));
+
+      ResultSet resultSet = stmt.executeQuery();
+      existeCategoria = resultSet.next();
+    } catch (SQLException e) {
+      throw new DAOException(e);
+    } finally {
+      BancoDadosAction.getInstance().fecharConexao();
+    }
+
+    return existeCategoria;
+  }
+
+
+  public static Categoria retornaCategoria(ResultSet resultSet) throws SQLException {
 		Categoria cat = new Categoria();
 		cat.setCodigo(resultSet.getInt("codigo"));
 		cat.setDescricao(resultSet.getString("descricao"));

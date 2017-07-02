@@ -49,8 +49,6 @@ public class BancoDadosAction implements BancoDadosDAO {
           PROPRIEDADES.getProperty("jdbc.username"),
           PROPRIEDADES.getProperty("jdbc.password"));
 
-      System.out.println("Conexão Realizada! - Schema: " + conexao.getSchema());
-
     } catch (DAOException e) {
       throw new DAOException("Algo deu errado ' = ", e);
     } catch (ClassNotFoundException e) {
@@ -92,7 +90,7 @@ public class BancoDadosAction implements BancoDadosDAO {
    * @throws Exception
    */
   private void criarBancoDados() throws Exception {
-    System.out.println("Criando DB...");
+    System.out.println("Analisando DB...");
     Statement sql = conexao.createStatement();
 
     sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Usuarios') BEGIN "
@@ -102,6 +100,8 @@ public class BancoDadosAction implements BancoDadosDAO {
         + "email VARCHAR(255) NOT NULL, "
         + "senha VARCHAR(255) NOT NULL,"
         + "tipo VARCHAR(20) NOT NULL,"
+        + "endereco_rua VARCHAR(255) NOT NULL,"
+        + "endereco_numero INTEGER NOT NULL,"
         + "CONSTRAINT tipo_usuario CHECK (tipo IN ('Vendedor', 'Participanete')) ) END ");
 
     sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Leiloes') BEGIN "
@@ -138,7 +138,7 @@ public class BancoDadosAction implements BancoDadosDAO {
     sql.close();
     conexao.close();
 
-    System.out.println("DB Criado");
+    System.out.println("DB Analisado");
   }
 
   /**
