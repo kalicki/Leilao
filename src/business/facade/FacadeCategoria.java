@@ -1,5 +1,7 @@
 package business.facade;
 
+import java.sql.SQLException;
+
 import business.action.CategoriaAction;
 import business.action.LeilaoAction;
 import business.dao.CategoriaDAO;
@@ -18,7 +20,7 @@ public class FacadeCategoria {
 		}
 	}
 		
-	 protected void adicionarCategoria(Integer codigo, String descricao) throws DAOException{
+	 protected void adicionarCategoria(Integer codigo, String descricao) throws DAOException, SQLException{
 		if(ValidatorCategoria.codigo(codigo)==false) throw new DAOException("C�digo inv�lido");
 		if(ValidatorCategoria.descricao(descricao)==false) throw new DAOException("Descri��o inv�lida");
 		Categoria categoria = new Categoria(codigo, descricao);

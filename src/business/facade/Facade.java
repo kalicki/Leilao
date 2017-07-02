@@ -1,5 +1,8 @@
 package business.facade;
 import business.dao.UsuarioDAO;
+
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -23,6 +26,7 @@ import business.validator.ValidatorCategoria;
 import business.validator.ValidatorLance;
 import business.validator.ValidatorLeilao;
 import business.validator.ValidatorUsuario;
+import db.BancoDadosAction;
 
 
 public class Facade {
@@ -40,13 +44,14 @@ public class Facade {
 
 	public void iniciarDB() throws Exception {
 		facadeDB.iniciarDB();
+		
 	}
 
 	public void adicionarUsuario(String cpfCnpj, UsuarioTipo usuarioTipo, String nome, String email, String senha, String enderecoRua, Integer enderecoNumero) throws DAOException{
 		facadeUsuario.adicionarUsuario(cpfCnpj, usuarioTipo, nome, email, senha, enderecoRua, enderecoNumero);
 	}
 
-	public void adicionarCategoria(Integer codigo, String descricao) throws DAOException{
+	public void adicionarCategoria(Integer codigo, String descricao) throws DAOException, SQLException{
 		facadeCategoria.adicionarCategoria(codigo, descricao);
 
 	}
