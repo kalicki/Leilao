@@ -1,4 +1,5 @@
 package business.facade;
+import business.dao.UsuarioDAO;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -33,6 +34,10 @@ public class Facade {
 	private FacadeLote facadaLote;
 	private FacadeProduto facadeProduto;
 
+	public Facade() throws Exception {
+		facadeDB = new FacadeDB();
+	}
+
 	public void iniciarDB() {
 		facadeDB.iniciarDB();
 	}
@@ -43,7 +48,7 @@ public class Facade {
 
 	public void adicionarCategoria(Integer codigo, String descricao) throws DAOException{
 		facadeCategoria.adicionarCategoria(codigo, descricao);
-		
+
 	}
 
 	public void adicionarLance(Integer codigo, Timestamp tempo, Double valor, Usuario usuario, Leilao leilao, Integer versao) throws DAOException{
@@ -51,9 +56,9 @@ public class Facade {
 	}
 
 	public void adicionarLeilao(Integer codigo, LeilaoTipo leilaoTipo, LanceTipo lanceTipo, Timestamp tempoInicio, Timestamp tempoTermino,
-			   Usuario usuario, Integer versao)throws DAOException{ 
+			   Usuario usuario, Integer versao)throws DAOException{
 		facadeLeilao.adicionarLeilao(codigo, leilaoTipo, lanceTipo, tempoInicio, tempoTermino, usuario, versao);
-		
+
 	}
 
 	public void adicioanarLote(Integer codigo, List<Produto> produto, Leilao leilao) throws DAOException {
@@ -63,7 +68,7 @@ public class Facade {
 	public void adicinar(Integer codigo, String descricao, String descricaoDetalhada, Lote lote, Categoria categoria)throws DAOException {
 		facadeProduto.adicinar(codigo, descricao, descricaoDetalhada, lote, categoria);
 	}
-	   
+
 	   
 	   
 	   

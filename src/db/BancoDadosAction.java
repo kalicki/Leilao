@@ -36,24 +36,18 @@ public class BancoDadosAction implements BancoDadosDAO {
       PROPRIEDADES = new Properties();
     }
 
-    InputStream propriedadesArquivo = (this.getClass().getResourceAsStream(CONFIG_ARQUVIO));
-
-    if (propriedadesArquivo == null) {
-      throw new DAOException("Falha no arquivo '" + CONFIG_ARQUVIO + "' pois não foi enconexaotrado!");
-    }
-
     try {
-      PROPRIEDADES.load(propriedadesArquivo);
+      PROPRIEDADES.load((this.getClass().getResourceAsStream(CONFIG_ARQUVIO)));
     } catch (IOException e) {
       throw new DAOException("Algo de errado com '" + CONFIG_ARQUVIO + "'.", e);
     }
 
     try {
-      Class.forName(PROPRIEDADES.getProperty("driver"));
+      Class.forName(PROPRIEDADES.getProperty("jdbc.driver"));
       conexao = DriverManager.getConnection(
-          PROPRIEDADES.getProperty("url"),
-          PROPRIEDADES.getProperty("username"),
-          PROPRIEDADES.getProperty("password"));
+          PROPRIEDADES.getProperty("jdbc.url"),
+          PROPRIEDADES.getProperty("jdbc.username"),
+          PROPRIEDADES.getProperty("jdbc.password"));
 
       System.out.println("Conexão Realizada! - Schema: " + conexao.getSchema());
 
