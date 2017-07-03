@@ -1,134 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Adicionado estrutura DAO">
-<<<<<<< HEAD
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/Login.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/style.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/gui/Controller.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Leilao.eml" afterPath="$PROJECT_DIR$/Leilao.eml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/App.java" afterPath="$PROJECT_DIR$/src/gui/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/sample.fxml" afterPath="$PROJECT_DIR$/src/gui/sample.fxml" />
-=======
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/action/CategoriaAction.java" afterPath="$PROJECT_DIR$/src/business/action/CategoriaAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/action/LanceAction.java" afterPath="$PROJECT_DIR$/src/business/action/LanceAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/action/LeilaoAction.java" afterPath="$PROJECT_DIR$/src/business/action/LeilaoAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/action/LoteAction.java" afterPath="$PROJECT_DIR$/src/business/action/LoteAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/action/ProdutoAction.java" afterPath="$PROJECT_DIR$/src/business/action/ProdutoAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/action/UsuarioAction.java" afterPath="$PROJECT_DIR$/src/business/action/UsuarioAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/dao/CategoriaDAO.java" afterPath="$PROJECT_DIR$/src/business/dao/CategoriaDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/dao/LanceDAO.java" afterPath="$PROJECT_DIR$/src/business/dao/LanceDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/dao/LeilaoDAO.java" afterPath="$PROJECT_DIR$/src/business/dao/LeilaoDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/dao/LoteDAO.java" afterPath="$PROJECT_DIR$/src/business/dao/LoteDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/dao/ProdutoDAO.java" afterPath="$PROJECT_DIR$/src/business/dao/ProdutoDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/dao/UsuarioDAO.java" afterPath="$PROJECT_DIR$/src/business/dao/UsuarioDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/facade/Facade.java" afterPath="$PROJECT_DIR$/src/business/facade/Facade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/facade/FacadeCategoria.java" afterPath="$PROJECT_DIR$/src/business/facade/FacadeCategoria.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/facade/FacadeLance.java" afterPath="$PROJECT_DIR$/src/business/facade/FacadeLance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/facade/FacadeLeilao.java" afterPath="$PROJECT_DIR$/src/business/facade/FacadeLeilao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/facade/FacadeLote.java" afterPath="$PROJECT_DIR$/src/business/facade/FacadeLote.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/facade/FacadeProduto.java" afterPath="$PROJECT_DIR$/src/business/facade/FacadeProduto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/facade/FacadeUsuario.java" afterPath="$PROJECT_DIR$/src/business/facade/FacadeUsuario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/model/Lance.java" afterPath="$PROJECT_DIR$/src/business/model/Lance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/model/Leilao.java" afterPath="$PROJECT_DIR$/src/business/model/Leilao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/model/Lote.java" afterPath="$PROJECT_DIR$/src/business/model/Lote.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/model/Produto.java" afterPath="$PROJECT_DIR$/src/business/model/Produto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/validator/ValidatorLance.java" afterPath="$PROJECT_DIR$/src/business/validator/ValidatorLance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/validator/ValidatorLeilao.java" afterPath="$PROJECT_DIR$/src/business/validator/ValidatorLeilao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/validator/ValidatorLote.java" afterPath="$PROJECT_DIR$/src/business/validator/ValidatorLote.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/validator/ValidatorProduto.java" afterPath="$PROJECT_DIR$/src/business/validator/ValidatorProduto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/BancoDadosAction.java" afterPath="$PROJECT_DIR$/src/db/BancoDadosAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/App.java" afterPath="$PROJECT_DIR$/src/gui/App.java" />
->>>>>>> db
+    <list default="true" id="1d02a3d5-bd73-4969-a40c-b134a1fb4486" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
-    <ignored path="JavaFxApplication.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="leilao@alphadb01.database.windows.net" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="leilao@alphadb01.database.windows.net" type="e3449647:DbNodeDescriptor" />
-        <item name="leilao" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="leilao@alphadb01.database.windows.net" type="e3449647:DbNodeDescriptor" />
-        <item name="leilao" type="e3449647:DbNodeDescriptor" />
-        <item name="dbo" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="leilao@alphadb01.database.windows.net" type="e3449647:DbNodeDescriptor" />
-        <item name="leilao" type="e3449647:DbNodeDescriptor" />
-        <item name="dbo" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
-    <ui_properties converted="true" />
-    <breakpoint_rules converted="true" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
@@ -138,133 +18,51 @@
       <file leaf-file-name="LanceAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/action/LanceAction.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="420">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="e#631#632#0" expanded="true" />
-                <element signature="e#652#653#0" expanded="true" />
-=======
             <state relative-caret-position="206">
               <caret line="178" column="26" lean-forward="false" selection-start-line="178" selection-start-column="26" selection-end-line="178" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1499051509000" expanded="true" signature="953:1037" ph="INSERT INTO Lances... " />
-                <marker date="1499051509000" expanded="true" signature="2053:2090" ph="SELECT * FRO... Lances" />
-                <marker date="1499051509000" expanded="true" signature="2772:2866" ph="UPDATE Lance... " />
-                <marker date="1499051509000" expanded="true" signature="3634:3668" ph="DELETE FROM " />
-                <marker date="1499051509000" expanded="true" signature="4320:4340" ph="SELECT * FRO... Lances" />
-                <marker date="1499051509000" expanded="true" signature="4915:4995" ph="SELECT codig... Lances" />
->>>>>>> db
+                <marker date="1499052672000" expanded="true" signature="953:1037" ph="INSERT INTO Lances... " />
+                <marker date="1499052672000" expanded="true" signature="2053:2090" ph="SELECT * FRO... Lances" />
+                <marker date="1499052672000" expanded="true" signature="2772:2866" ph="UPDATE Lance... " />
+                <marker date="1499052672000" expanded="true" signature="3634:3668" ph="DELETE FROM " />
+                <marker date="1499052672000" expanded="true" signature="4320:4340" ph="SELECT * FRO... Lances" />
+                <marker date="1499052672000" expanded="true" signature="4915:4995" ph="SELECT codig... Lances" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-=======
-      <file leaf-file-name="FacadeLeilao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/facade/FacadeLeilao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
->>>>>>> db
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/db/Database.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-=======
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="50" column="60" lean-forward="false" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
->>>>>>> db
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="ManipulaDB.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/db/ManipulaDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <marker date="1498411917000" expanded="true" signature="274:300" ph="SELECT * FRO... usuario" />
-                <marker date="1498411917000" expanded="true" signature="1119:1340" ph="INSERT INTO usuario... " />
-              </folding>
-=======
       <file leaf-file-name="Facade.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/facade/Facade.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+              <caret line="36" column="3" lean-forward="false" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
               <folding />
->>>>>>> db
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="login.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gui/login.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="82" lean-forward="false" selection-start-line="39" selection-start-column="82" selection-end-line="39" selection-end-column="82" />
-=======
       <file leaf-file-name="FacadeProduto.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/facade/FacadeProduto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="393">
-              <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
->>>>>>> db
+              <caret line="36" column="3" lean-forward="false" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-=======
       <file leaf-file-name="Lance.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/model/Lance.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
-              <caret line="65" column="1" lean-forward="true" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
->>>>>>> db
+              <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
-=======
       <file leaf-file-name="FacadeUsuario.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/facade/FacadeUsuario.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -289,223 +87,54 @@
         <entry file="file://$PROJECT_DIR$/src/db/BancoDadosAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="436">
-              <caret line="140" column="61" lean-forward="true" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
->>>>>>> db
+              <caret line="140" column="61" lean-forward="false" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
               <folding>
-                <marker date="1499052405000" expanded="true" signature="2720:3141" ph="CREATE TABLE... Usuarios" />
-                <marker date="1499052405000" expanded="true" signature="3273:3606" ph="CREATE TABLE... Leiloes" />
-                <marker date="1499052405000" expanded="true" signature="3737:3983" ph="CREATE TABLE... Lances" />
-                <marker date="1499052405000" expanded="true" signature="3737:3984" ph="CREATE TABLE... Lances" />
-                <marker date="1499052405000" expanded="true" signature="3737:4013" ph="CREATE TABLE... Lances" />
-                <marker date="1499052405000" expanded="true" signature="4148:4275" ph="CREATE TABLE... Categorias" />
-                <marker date="1499052405000" expanded="true" signature="4409:4651" ph="CREATE TABLE... Produtos" />
-                <marker date="1499052405000" expanded="true" signature="5333:5350" ph="DROP TABLE L... " />
-                <marker date="1499052405000" expanded="true" signature="5378:5396" ph="DROP TABLE L... " />
-                <marker date="1499052405000" expanded="true" signature="5424:5443" ph="DROP TABLE P... " />
-                <marker date="1499052405000" expanded="true" signature="5471:5492" ph="DROP TABLE C... " />
-                <marker date="1499052405000" expanded="true" signature="5520:5539" ph="DROP TABLE U... " />
+                <marker date="1499052672000" expanded="true" signature="2720:3141" ph="CREATE TABLE... Usuarios" />
+                <marker date="1499052672000" expanded="true" signature="3273:3606" ph="CREATE TABLE... Leiloes" />
+                <marker date="1499052672000" expanded="true" signature="3737:3983" ph="CREATE TABLE... Lances" />
+                <marker date="1499052672000" expanded="true" signature="3737:3984" ph="CREATE TABLE... Lances" />
+                <marker date="1499052672000" expanded="true" signature="3737:4013" ph="CREATE TABLE... Lances" />
+                <marker date="1499052672000" expanded="true" signature="4148:4275" ph="CREATE TABLE... Categorias" />
+                <marker date="1499052672000" expanded="true" signature="4409:4651" ph="CREATE TABLE... Produtos" />
+                <marker date="1499052672000" expanded="true" signature="5333:5350" ph="DROP TABLE L... " />
+                <marker date="1499052672000" expanded="true" signature="5378:5396" ph="DROP TABLE L... " />
+                <marker date="1499052672000" expanded="true" signature="5424:5443" ph="DROP TABLE P... " />
+                <marker date="1499052672000" expanded="true" signature="5471:5492" ph="DROP TABLE C... " />
+                <marker date="1499052672000" expanded="true" signature="5520:5539" ph="DROP TABLE U... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/sample.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+      <file leaf-file-name="dataSources.local.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/App.java">
+      <file leaf-file-name="dataSources.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="48" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-=======
-      <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/model/Usuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="20" />
-              <folding>
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-              </folding>
->>>>>>> db
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>FormaLance</find>
-      <find>formaLance</find>
-      <find>tipo</find>
-      <find>endereçoNumero</find>
-      <find>entrar</find>
-<<<<<<< HEAD
-=======
-      <find>jdbc.</find>
-      <find>usuario</find>
-      <find>con</find>
-      <find>dbName</find>
-      <find>getConnection()</find>
-      <find>com.microsoft.sqlserver.jdbc.SQLServerDriver</find>
-      <find>add</find>
-      <find>codigo_usuario</find>
-      <find>buscar</find>
-      <find>SQL_EXISTE_CATEGORIASQL_EXISTE_CATEGORIA</find>
-      <find>Categoria</find>
-      <find>descricao</find>
-      <find>Lance</find>
-      <find>lance</find>
-      <find>pre</find>
-      <find>preco</find>
-      <find>Preco</find>
-      <find>leilao</find>
-      <find>Usuario</find>
-      <find>retornaLote</find>
-      <find>usuariolo</find>
-      <find>lote</find>
-      <find>produto</find>
-      <find>getCodigo()</find>
-      <find>leilao_tipo</find>
->>>>>>> db
-    </findStrings>
-    <replaceStrings>
-      <replace>tipo</replace>
-      <replace>lanceTipo</replace>
-      <replace>enderecoNumero</replace>
-<<<<<<< HEAD
-=======
-      <replace>Produto</replace>
-      <replace>lance</replace>
-      <replace>conexao</replace>
-      <replace>Lance</replace>
-      <replace>Leilao</replace>
-      <replace>leilao</replace>
-      <replace>cat</replace>
-      <replace>valor</replace>
-      <replace>Valor</replace>
-      <replace>lote</replace>
-      <replace>produto</replace>
-      <replace>usuario</replace>
-      <replace>getCpfCnpj()</replace>
->>>>>>> db
-    </replaceStrings>
-  </component>
-  <component name="FindManager">
-    <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="false" />
-    </FindUsagesManager>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/business/model/LeilaoDemanda.java" />
-        <option value="$PROJECT_DIR$/src/business/model/LeilaoOferta.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Participante.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Vendedor.java" />
-        <option value="$PROJECT_DIR$/src/business/db/Database.java" />
-        <option value="$PROJECT_DIR$/src/business/db/ManipulaDB.java" />
-        <option value="$PROJECT_DIR$/src/business/model/LanceTipo.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Lance.java" />
-        <option value="$PROJECT_DIR$/src/business/model/LeilaoTipo.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Categoria.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/business/model/Lote.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Leilao.java" />
-        <option value="$PROJECT_DIR$/src/business/model/UsuarioTipo.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/DAOException.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/LeilaoDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/ProdutoDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/CategoriaDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/LanceDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/UsuarioDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/LoteDAO.java" />
-=======
-        <option value="$PROJECT_DIR$/src/business/model/UsuarioTipo.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Usuario.java" />
->>>>>>> db
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/gui/Controle.java" />
-        <option value="$PROJECT_DIR$/src/gui/App.java" />
-        <option value="$PROJECT_DIR$/src/gui/style.css" />
-        <option value="$PROJECT_DIR$/src/gui/login.fxml" />
-        <option value="$PROJECT_DIR$/src/gui/Login.java" />
-<<<<<<< HEAD
-=======
-        <option value="$PROJECT_DIR$/src/business/db/Database.java" />
-        <option value="$PROJECT_DIR$/src/business/db/config.properties" />
-        <option value="$PROJECT_DIR$/src/business/dao/DAOException.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/PropriedadesDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/facade/FacadeCategoria.java" />
-        <option value="$PROJECT_DIR$/src/business/db/PropriedadesDAO.java" />
-        <option value="$PROJECT_DIR$/src/db/PropriedadesDAO.java" />
-        <option value="$PROJECT_DIR$/src/db/BancoDadosDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/facade/FacadeDB.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/283ef31f-f0ed-4550-8fc8-9061637c4276/console.sql" />
-        <option value="$PROJECT_DIR$/src/db/config.properties" />
-        <option value="$PROJECT_DIR$/sqljdbc42.jar!/com/microsoft/sqlserver/jdbc/SQLServerConnection.class" />
-        <option value="$PROJECT_DIR$/src/business/dao/LanceDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/action/LanceAction.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Lote.java" />
-        <option value="$PROJECT_DIR$/src/business/action/CategoriaAction.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/CategoriaDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/action/ProdutoAction.java" />
-        <option value="$PROJECT_DIR$/src/business/action/LoteAction.java" />
-        <option value="$PROJECT_DIR$/src/business/action/UsuarioAction.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/UsuarioDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/ProdutoDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/LoteDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/action/LeilaoAction.java" />
-        <option value="$PROJECT_DIR$/src/business/dao/LeilaoDAO.java" />
-        <option value="$PROJECT_DIR$/src/business/facade/FacadeLance.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Leilao.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Produto.java" />
-        <option value="$PROJECT_DIR$/src/business/facade/FacadeLeilao.java" />
-        <option value="$PROJECT_DIR$/src/gui/App.java" />
-        <option value="$PROJECT_DIR$/src/business/facade/Facade.java" />
-        <option value="$PROJECT_DIR$/src/business/facade/FacadeProduto.java" />
-        <option value="$PROJECT_DIR$/src/business/model/Lance.java" />
-        <option value="$PROJECT_DIR$/src/business/facade/FacadeUsuario.java" />
-        <option value="$PROJECT_DIR$/src/business/facade/FacadeLote.java" />
-        <option value="$PROJECT_DIR$/src/db/BancoDadosAction.java" />
->>>>>>> db
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -515,16 +144,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="874" />
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
-  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -543,10 +163,6 @@
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
-<<<<<<< HEAD
-      <pane id="AndroidView" />
-=======
->>>>>>> db
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -557,6 +173,11 @@
             <path>
               <item name="Leilao" type="b2602c69:ProjectViewProjectNode" />
               <item name="Leilao" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leilao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leilao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -564,36 +185,6 @@
               <item name="Leilao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Leilao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Leilao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Leilao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Leilao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
-=======
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Leilao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Leilao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="facade" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Leilao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Leilao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Leilao" type="b2602c69:ProjectViewProjectNode" />
@@ -605,39 +196,14 @@
               <item name="Leilao" type="b2602c69:ProjectViewProjectNode" />
               <item name="Leilao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
->>>>>>> db
               <item name="gui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
-=======
       <pane id="AndroidView" />
->>>>>>> db
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="ignore_missing_gitignore" value="true" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Azure (Microsoft)" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -651,42 +217,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="gui.App" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Leilao" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-    </configuration>
+  <component name="RunManager" selected="Application.app">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="gui.App" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -706,18 +250,18 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
+        <value defaultName="singleModule" />
       </option>
       <envs />
       <patterns />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
@@ -741,13 +285,13 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
+        <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
@@ -755,49 +299,29 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
-      <Host>localhost</Host>
-      <Port>5050</Port>
+    <configuration name="app" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="gui.App" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Leilao" />
+      <envs />
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
-      <created>1359379246138</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1359379246138</updated>
-      <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1498370196252" duration="3314000" />
-      <workItem from="1498411546763" duration="5996000" />
-      <workItem from="1498520684009" duration="471000" />
-      <workItem from="1498677077076" duration="8683000" />
-      <workItem from="1498778073767" duration="1006000" />
-<<<<<<< HEAD
-=======
-      <workItem from="1498874762844" duration="14871000" />
-      <workItem from="1499045219578" duration="5892000" />
->>>>>>> db
-    </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="28769000" />
-=======
-    <option name="totallyTimeSpent" value="92059000" />
->>>>>>> db
+    <option name="totallyTimeSpent" value="477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
@@ -810,16 +334,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24189526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24189526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
->>>>>>> db
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24189526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27847221" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27847221" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -843,18 +363,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Adicionado estrutura DAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionado estrutura DAO" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -864,71 +372,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/business/model/Vendedor.java" />
-    <entry file="file://$PROJECT_DIR$/src/business/model/LanceTipo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Lance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="1" lean-forward="false" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/UsuarioTipo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding>
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Participante.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Leilao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="122" column="3" lean-forward="false" selection-start-line="122" selection-start-column="3" selection-end-line="122" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/business/model/Participante.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/style.css" />
     <entry file="file://$PROJECT_DIR$/src/gui/Login.java" />
     <entry file="file://$PROJECT_DIR$/src/gui/login.fxml" />
     <entry file="file://$PROJECT_DIR$/src/gui/sample.fxml">
@@ -1033,31 +476,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="55" />
->>>>>>> db
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/business/model/Leilao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Lance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/db/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-=======
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1089,28 +511,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="167" column="9" lean-forward="false" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
->>>>>>> db
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/business/db/ManipulaDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <marker date="1498411917000" expanded="true" signature="274:300" ph="SELECT * FRO... usuario" />
-            <marker date="1498411917000" expanded="true" signature="1119:1340" ph="INSERT INTO usuario... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-=======
     <entry file="file://$PROJECT_DIR$/src/business/model/LanceTipo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1123,201 +527,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
->>>>>>> db
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/gui/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-=======
     <entry file="file://$PROJECT_DIR$/src/gui/Controller.java">
->>>>>>> db
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/gui/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Leilao.userlibraries">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Leilao.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/LeilaoOferta.java" />
-    <entry file="uml://JAVA/business.model.Leilao">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>business.model.Leilao</OriginalElement>
-          <nodes>
-            <node x="" y="">business.model.Leilao</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="42.0" y="15.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Lote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/LeilaoTipo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/LeilaoDemanda.java" />
-    <entry file="file://$PROJECT_DIR$/src/business/model/Vendedor.java" />
-    <entry file="file://$PROJECT_DIR$/src/business/model/LanceTipo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/UsuarioTipo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Participante.java" />
-    <entry file="file://$PROJECT_DIR$/src/business/model/Leilao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/dao/ProdutoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Produto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="15" column="108" lean-forward="false" selection-start-line="15" selection-start-column="108" selection-end-line="15" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Categoria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Lance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="74" column="1" lean-forward="false" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/dao/DAOException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/model/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/dao/LanceDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/dao/LeilaoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/dao/LoteDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-=======
     <entry file="file://$PROJECT_DIR$/src/business/dao/LanceDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1355,13 +576,13 @@
         <state relative-caret-position="616">
           <caret line="146" column="22" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="146" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1499051509000" expanded="true" signature="917:962" ph="INSERT INTO Categorias... " />
-            <marker date="1499051509000" expanded="true" signature="1831:1872" ph="SELECT * FRO... Categorias" />
-            <marker date="1499051509000" expanded="true" signature="2558:2610" ph="UPDATE Categ... " />
-            <marker date="1499051509000" expanded="true" signature="3230:3268" ph="DELETE FROM " />
-            <marker date="1499051509000" expanded="true" signature="3889:3913" ph="SELECT * FRO... Categorias" />
-            <marker date="1499051509000" expanded="true" signature="4502:4588" ph="SELECT codig... Categorias" />
+            <element signature="imports" expanded="false" />
+            <marker date="1499052672000" expanded="true" signature="917:962" ph="INSERT INTO Categorias... " />
+            <marker date="1499052672000" expanded="true" signature="1831:1872" ph="SELECT * FRO... Categorias" />
+            <marker date="1499052672000" expanded="true" signature="2558:2610" ph="UPDATE Categ... " />
+            <marker date="1499052672000" expanded="true" signature="3230:3268" ph="DELETE FROM " />
+            <marker date="1499052672000" expanded="true" signature="3889:3913" ph="SELECT * FRO... Categorias" />
+            <marker date="1499052672000" expanded="true" signature="4502:4588" ph="SELECT codig... Categorias" />
           </folding>
         </state>
       </provider>
@@ -1371,11 +592,11 @@
         <state relative-caret-position="-895">
           <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1499051510000" expanded="true" signature="951:1055" ph="INSERT INTO Produtos... " />
-            <marker date="1499051510000" expanded="true" signature="2087:2126" ph="SELECT * FRO... Produtos" />
-            <marker date="1499051510000" expanded="true" signature="2819:2855" ph="DELETE FROM " />
-            <marker date="1499051510000" expanded="true" signature="3641:3722" ph="SELECT codig... Produtos" />
+            <element signature="imports" expanded="false" />
+            <marker date="1499052672000" expanded="true" signature="951:1055" ph="INSERT INTO Produtos... " />
+            <marker date="1499052672000" expanded="true" signature="2087:2126" ph="SELECT * FRO... Produtos" />
+            <marker date="1499052672000" expanded="true" signature="2819:2855" ph="DELETE FROM " />
+            <marker date="1499052672000" expanded="true" signature="3641:3722" ph="SELECT codig... Produtos" />
           </folding>
         </state>
       </provider>
@@ -1385,10 +606,10 @@
         <state relative-caret-position="105">
           <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
-            <marker date="1499051509000" expanded="true" signature="882:926" ph="INSERT INTO Lotes... " />
-            <marker date="1499051509000" expanded="true" signature="1777:1813" ph="SELECT * FRO... Lotes" />
-            <marker date="1499051509000" expanded="true" signature="2491:2524" ph="DELETE FROM " />
-            <marker date="1499051509000" expanded="true" signature="3295:3373" ph="SELECT codig... Lotes" />
+            <marker date="1499052672000" expanded="true" signature="882:926" ph="INSERT INTO Lotes... " />
+            <marker date="1499052672000" expanded="true" signature="1777:1813" ph="SELECT * FRO... Lotes" />
+            <marker date="1499052672000" expanded="true" signature="2491:2524" ph="DELETE FROM " />
+            <marker date="1499052672000" expanded="true" signature="3295:3373" ph="SELECT codig... Lotes" />
           </folding>
         </state>
       </provider>
@@ -1398,12 +619,12 @@
         <state relative-caret-position="282">
           <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1499051589000" expanded="true" signature="818:935" ph="INSERT INTO Usuarios... " />
-            <marker date="1499051589000" expanded="true" signature="1832:1873" ph="SELECT * FRO... Usuarios" />
-            <marker date="1499051589000" expanded="true" signature="2569:2605" ph="DELETE FROM " />
-            <marker date="1499051589000" expanded="true" signature="3266:3288" ph="SELECT * FRO... Usuarios" />
-            <marker date="1499051589000" expanded="true" signature="3874:3957" ph="SELECT codig... Usuarios" />
+            <element signature="imports" expanded="false" />
+            <marker date="1499052672000" expanded="true" signature="818:935" ph="INSERT INTO Usuarios... " />
+            <marker date="1499052672000" expanded="true" signature="1832:1873" ph="SELECT * FRO... Usuarios" />
+            <marker date="1499052672000" expanded="true" signature="2569:2605" ph="DELETE FROM " />
+            <marker date="1499052672000" expanded="true" signature="3266:3288" ph="SELECT * FRO... Usuarios" />
+            <marker date="1499052672000" expanded="true" signature="3874:3957" ph="SELECT codig... Usuarios" />
           </folding>
         </state>
       </provider>
@@ -1445,14 +666,14 @@
         <state relative-caret-position="2614">
           <caret line="197" column="33" lean-forward="false" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1499051889000" expanded="true" signature="1002:1126" ph="INSERT INTO Leilaos... " />
-            <marker date="1499051889000" expanded="true" signature="2264:2302" ph="SELECT * FRO... Leilaos" />
-            <marker date="1499051889000" expanded="true" signature="2988:3124" ph="UPDATE Leila... " />
-            <marker date="1499051889000" expanded="true" signature="3982:4017" ph="DELETE FROM " />
-            <marker date="1499051889000" expanded="true" signature="4671:4692" ph="SELECT * FRO... Leilaos" />
-            <marker date="1499051889000" expanded="true" signature="5283:5385" ph="SELECT * FRO... Leilaos" />
-            <marker date="1499051889000" expanded="true" signature="5965:6046" ph="SELECT codig... Leilaos" />
+            <element signature="imports" expanded="false" />
+            <marker date="1499052672000" expanded="true" signature="1002:1126" ph="INSERT INTO Leilaos... " />
+            <marker date="1499052672000" expanded="true" signature="2264:2302" ph="SELECT * FRO... Leilaos" />
+            <marker date="1499052672000" expanded="true" signature="2988:3124" ph="UPDATE Leila... " />
+            <marker date="1499052672000" expanded="true" signature="3982:4017" ph="DELETE FROM " />
+            <marker date="1499052672000" expanded="true" signature="4671:4692" ph="SELECT * FRO... Leilaos" />
+            <marker date="1499052672000" expanded="true" signature="5283:5385" ph="SELECT * FRO... Leilaos" />
+            <marker date="1499052672000" expanded="true" signature="5965:6046" ph="SELECT codig... Leilaos" />
           </folding>
         </state>
       </provider>
@@ -1470,8 +691,8 @@
         <state relative-caret-position="301">
           <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding>
-            <element signature="e#1984#1985#0" expanded="true" />
-            <element signature="e#2002#2003#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="false" />
+            <element signature="e#2002#2003#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1506,7 +727,7 @@
     <entry file="file://$PROJECT_DIR$/src/business/facade/FacadeLeilao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1515,84 +736,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
           <caret line="50" column="60" lean-forward="false" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
-          <folding />
+          <folding>
+            <marker date="1499052672000" expanded="true" signature="656:2261" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/facade/Facade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
->>>>>>> db
+          <caret line="36" column="3" lean-forward="false" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/business/db/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-=======
     <entry file="file://$PROJECT_DIR$/src/business/facade/FacadeProduto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
-          <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
->>>>>>> db
+          <caret line="36" column="3" lean-forward="false" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/business/dao/CategoriaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/dao/UsuarioDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/action/UsuarioAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/db/ManipulaDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <marker date="1498411917000" expanded="true" signature="274:300" ph="SELECT * FRO... usuario" />
-            <marker date="1498411917000" expanded="true" signature="1119:1340" ph="INSERT INTO usuario... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-=======
     <entry file="file://$PROJECT_DIR$/src/business/action/LanceAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="178" column="26" lean-forward="false" selection-start-line="178" selection-start-column="26" selection-end-line="178" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1499051509000" expanded="true" signature="953:1037" ph="INSERT INTO Lances... " />
-            <marker date="1499051509000" expanded="true" signature="2053:2090" ph="SELECT * FRO... Lances" />
-            <marker date="1499051509000" expanded="true" signature="2772:2866" ph="UPDATE Lance... " />
-            <marker date="1499051509000" expanded="true" signature="3634:3668" ph="DELETE FROM " />
-            <marker date="1499051509000" expanded="true" signature="4320:4340" ph="SELECT * FRO... Lances" />
-            <marker date="1499051509000" expanded="true" signature="4915:4995" ph="SELECT codig... Lances" />
+            <marker date="1499052672000" expanded="true" signature="953:1037" ph="INSERT INTO Lances... " />
+            <marker date="1499052672000" expanded="true" signature="2053:2090" ph="SELECT * FRO... Lances" />
+            <marker date="1499052672000" expanded="true" signature="2772:2866" ph="UPDATE Lance... " />
+            <marker date="1499052672000" expanded="true" signature="3634:3668" ph="DELETE FROM " />
+            <marker date="1499052672000" expanded="true" signature="4320:4340" ph="SELECT * FRO... Lances" />
+            <marker date="1499052672000" expanded="true" signature="4915:4995" ph="SELECT codig... Lances" />
           </folding>
         </state>
       </provider>
@@ -1600,7 +777,7 @@
     <entry file="file://$PROJECT_DIR$/src/business/model/Lance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
-          <caret line="65" column="1" lean-forward="true" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+          <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1609,154 +786,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="26" />
->>>>>>> db
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/gui/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="48" />
-=======
     <entry file="file://$PROJECT_DIR$/src/business/facade/FacadeLote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="26" />
->>>>>>> db
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Login.java">
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="225">
-          <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2168">
+          <caret line="469" column="62" lean-forward="false" selection-start-line="469" selection-start-column="62" selection-end-line="469" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/BancoDadosAction.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
-          <caret line="140" column="61" lean-forward="true" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
+          <caret line="140" column="61" lean-forward="false" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
           <folding>
-            <marker date="1499052405000" expanded="true" signature="2720:3141" ph="CREATE TABLE... Usuarios" />
-            <marker date="1499052405000" expanded="true" signature="3273:3606" ph="CREATE TABLE... Leiloes" />
-            <marker date="1499052405000" expanded="true" signature="3737:3983" ph="CREATE TABLE... Lances" />
-            <marker date="1499052405000" expanded="true" signature="3737:3984" ph="CREATE TABLE... Lances" />
-            <marker date="1499052405000" expanded="true" signature="3737:4013" ph="CREATE TABLE... Lances" />
-            <marker date="1499052405000" expanded="true" signature="4148:4275" ph="CREATE TABLE... Categorias" />
-            <marker date="1499052405000" expanded="true" signature="4409:4651" ph="CREATE TABLE... Produtos" />
-            <marker date="1499052405000" expanded="true" signature="5333:5350" ph="DROP TABLE L... " />
-            <marker date="1499052405000" expanded="true" signature="5378:5396" ph="DROP TABLE L... " />
-            <marker date="1499052405000" expanded="true" signature="5424:5443" ph="DROP TABLE P... " />
-            <marker date="1499052405000" expanded="true" signature="5471:5492" ph="DROP TABLE C... " />
-            <marker date="1499052405000" expanded="true" signature="5520:5539" ph="DROP TABLE U... " />
->>>>>>> db
+            <marker date="1499052672000" expanded="true" signature="2720:3141" ph="CREATE TABLE... Usuarios" />
+            <marker date="1499052672000" expanded="true" signature="3273:3606" ph="CREATE TABLE... Leiloes" />
+            <marker date="1499052672000" expanded="true" signature="3737:3983" ph="CREATE TABLE... Lances" />
+            <marker date="1499052672000" expanded="true" signature="3737:3984" ph="CREATE TABLE... Lances" />
+            <marker date="1499052672000" expanded="true" signature="3737:4013" ph="CREATE TABLE... Lances" />
+            <marker date="1499052672000" expanded="true" signature="4148:4275" ph="CREATE TABLE... Categorias" />
+            <marker date="1499052672000" expanded="true" signature="4409:4651" ph="CREATE TABLE... Produtos" />
+            <marker date="1499052672000" expanded="true" signature="5333:5350" ph="DROP TABLE L... " />
+            <marker date="1499052672000" expanded="true" signature="5378:5396" ph="DROP TABLE L... " />
+            <marker date="1499052672000" expanded="true" signature="5424:5443" ph="DROP TABLE P... " />
+            <marker date="1499052672000" expanded="true" signature="5471:5492" ph="DROP TABLE C... " />
+            <marker date="1499052672000" expanded="true" signature="5520:5539" ph="DROP TABLE U... " />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/gui/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/login.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="82" lean-forward="false" selection-start-line="39" selection-start-column="82" selection-end-line="39" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-=======
->>>>>>> db
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>JavaFXApp</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Leilao</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>jfoenix</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
