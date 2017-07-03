@@ -1,13 +1,11 @@
 package business.facade;
 
-import java.sql.SQLException;
-
 import business.action.CategoriaAction;
-import business.action.LeilaoAction;
 import business.dao.CategoriaDAO;
 import business.dao.DAOException;
 import business.model.Categoria;
 import business.validator.ValidatorCategoria;
+import java.sql.SQLException;
 
 public class FacadeCategoria {
 	private CategoriaDAO dao;

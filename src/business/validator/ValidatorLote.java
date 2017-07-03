@@ -1,9 +1,8 @@
 package business.validator;
 
-import java.util.List;
-
 import business.model.Leilao;
 import business.model.Produto;
+import java.util.List;
 
 public class ValidatorLote {
 

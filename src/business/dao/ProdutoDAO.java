@@ -1,6 +1,8 @@
 package business.dao;
 
 import business.model.Produto;
+import business.model.Usuario;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -9,13 +11,15 @@ import java.util.List;
  */
 public interface ProdutoDAO {
 
-  Produto criar(Produto bem) throws DAOException;
+  Produto criar(Produto bem) throws DAOException, SQLException;
 
   Produto buscar(Integer codigo) throws DAOException;
 
-  Produto atualizar(Produto bem) throws DAOException;
+  void atualizar(Produto bem) throws DAOException;
 
   Produto remover(Produto bem) throws DAOException;
 
-  List<Produto> listar(Produto condicao) throws DAOException;
+  List<Produto> listar() throws DAOException;
+
+  boolean existeProduto(Produto produto) throws DAOException;
 }

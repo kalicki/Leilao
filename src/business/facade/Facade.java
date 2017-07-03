@@ -1,32 +1,17 @@
 package business.facade;
-import business.dao.UsuarioDAO;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.util.List;
-
-import javax.xml.bind.DataBindingException;
-
-import business.action.UsuarioAction;
-import business.dao.CategoriaDAO;
 import business.dao.DAOException;
-import business.dao.LanceDAO;
-import business.dao.LeilaoDAO;
 import business.model.Categoria;
-import business.model.Lance;
 import business.model.LanceTipo;
 import business.model.Leilao;
 import business.model.LeilaoTipo;
 import business.model.Lote;
 import business.model.Produto;
-import  business.model.Usuario;
+import business.model.Usuario;
 import business.model.UsuarioTipo;
-import business.validator.ValidatorCategoria;
-import business.validator.ValidatorLance;
-import business.validator.ValidatorLeilao;
-import business.validator.ValidatorUsuario;
-import db.BancoDadosAction;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.List;
 
 
 public class Facade {
@@ -57,12 +42,12 @@ public class Facade {
 	}
 
 	public void adicionarLance(Integer codigo, Timestamp tempo, Double valor, Usuario usuario, Leilao leilao, Integer versao) throws DAOException{
-		facadeLance.adicionarLance(codigo, tempo, valor, usuario, leilao, versao);
+		facadeLance.adicionarLance(tempo, valor, usuario, leilao);
 	}
 
 	public void adicionarLeilao(Integer codigo, LeilaoTipo leilaoTipo, LanceTipo lanceTipo, Timestamp tempoInicio, Timestamp tempoTermino,
 			   Usuario usuario, Integer versao)throws DAOException{
-		facadeLeilao.adicionarLeilao(codigo, leilaoTipo, lanceTipo, tempoInicio, tempoTermino, usuario, versao);
+		facadeLeilao.adicionarLeilao(leilaoTipo, lanceTipo, tempoInicio, tempoTermino, usuario);
 
 	}
 

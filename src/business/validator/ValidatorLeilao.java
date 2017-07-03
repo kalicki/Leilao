@@ -1,13 +1,12 @@
 package business.validator;
 
-import java.sql.Timestamp;
-import java.util.List;
-
 import business.model.Lance;
 import business.model.LanceTipo;
 import business.model.LeilaoTipo;
 import business.model.Lote;
 import business.model.Usuario;
+import java.sql.Timestamp;
+import java.util.List;
 
 public class ValidatorLeilao {
 

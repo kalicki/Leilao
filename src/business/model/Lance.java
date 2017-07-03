@@ -7,59 +7,60 @@ import java.sql.Timestamp;
  */
 public class Lance {
 
-    private Integer codigo;
-    private Timestamp tempo;
-    private Double valor;
-    private Usuario usuario;
-    private Leilao leilao;
+  private Integer codigo;
+  private Timestamp tempo;
+  private Double valor;
+  private Usuario usuario;
+  private Leilao leilao;
 
-    public Lance() {}
+  public Lance(Timestamp tempo, Double valor, Usuario usuario, Leilao leilao) {
+    this.tempo = tempo;
+    this.valor = valor;
+    this.usuario = usuario;
+    this.leilao = leilao;
+  }
 
-    public Lance(Integer codigo, Timestamp tempo, Double valor, Usuario usuario, Leilao leilao, Integer versao) {
-        this.codigo = codigo;
-        this.tempo = tempo;
-        this.valor = valor;
-        this.usuario = usuario;
-        this.leilao = leilao;
-    }
+  public Lance() {
 
-    public Integer getCodigo() {
-        return codigo;
-    }
+  }
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
-    }
+  public Integer getCodigo() {
+    return codigo;
+  }
 
-    public Timestamp getTempo() {
-        return tempo;
-    }
+  public void setCodigo(Integer codigo) {
+    this.codigo = codigo;
+  }
 
-    public void setTempo() {
-        this.tempo = tempo;
-    }
+  public Timestamp getTempo() {
+    return tempo;
+  }
 
-    public Double getValor() {
-        return valor;
-    }
+  public void setTempo(Timestamp tempo) {
+    this.tempo = this.tempo;
+  }
 
-    public void setValor(Double valor) {
-        this.valor = valor;
-    }
+  public Double getValor() {
+    return valor;
+  }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
+  public void setValor(Double valor) {
+    this.valor = valor;
+  }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
+  public Usuario getUsuario() {
+    return usuario;
+  }
 
-    public Leilao getLeilao() {
-        return leilao;
-    }
+  public void setUsuario(Usuario usuario) {
+    this.usuario = usuario;
+  }
 
-    public void setLeilao(Leilao leilao) {
-        this.leilao = leilao;
-    }
+  public Leilao getLeilao() {
+    return leilao;
+  }
+
+  public void setLeilao(Leilao leilao) {
+    this.leilao = leilao;
+  }
 }

@@ -1,18 +1,14 @@
 package business.facade;
 
 import business.action.LoteAction;
-import business.action.ProdutoAction;
-import business.dao.ProdutoDAO;
-import java.util.List;
-
 import business.dao.DAOException;
 import business.dao.LoteDAO;
 import business.model.Leilao;
 import business.model.Lote;
 import business.model.Produto;
-import business.validator.ValidatorLance;
 import business.validator.ValidatorLote;
-import javafx.fxml.LoadException;
+import java.sql.SQLException;
+import java.util.List;
 
 public class FacadeLote {
 	private LoteDAO dao;
@@ -30,7 +26,11 @@ public class FacadeLote {
 		if(ValidatorLote.leilao(leilao)== false) throw new DAOException("Leil�o n�o pode ser null");
 		if(ValidatorLote.listaProdutos(produto)==false) throw new DAOException("Lista n�o pode ser null"); 
 		Lote lote = new Lote(codigo,produto,leilao);
-		dao.criar(lote);
-		
+		try {
+			dao.criar(lote);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 	}
 }

@@ -108,10 +108,10 @@ public class BancoDadosAction implements BancoDadosDAO {
         + "CREATE TABLE Leiloes ( "
         + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
         + "leilao_tipo VARCHAR(60), "
-        + "lance_forma VARCHAR(60), "
+        + "lance_tipo VARCHAR(60), "
         + "tempo_inicio DATETIME, "
         + "tempo_termino DATETIME, "
-        + "preco FLOAT, "
+        + "valor FLOAT, "
         + "codigo_usuario VARCHAR(18) REFERENCES Usuarios (cpf_cnpj) ) END ");
 
     sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Lances') BEGIN "
@@ -134,11 +134,17 @@ public class BancoDadosAction implements BancoDadosDAO {
         + "descricao_detalhada VARCHAR(255), "
         + "codigo_categoria INTEGER REFERENCES Categorias (codigo) ) END ");
 
+    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Lotes') BEGIN  "
+        + "CREATE TABLE Lotes ( "
+        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
+        + "codigo_produto INTEGER REFERENCES Produtos (codigo), "
+        + "codigo_leilao INTEGER REFERENCES Leiloes (codigo) ) END ");
+
     // Fecha conexao
     sql.close();
     conexao.close();
 
-    System.out.println("DB Analisado");
+    System.out.println("DB Analisado!!!");
   }
 
   /**

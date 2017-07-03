@@ -1,7 +1,6 @@
 package business.dao;
 
 import business.model.Categoria;
-
 import java.sql.SQLException;
 import java.util.List;
 
@@ -19,5 +18,7 @@ public interface CategoriaDAO {
 
   Categoria remover(Categoria categoria) throws DAOException;
 
-  List<Categoria> listar(Categoria condicao) throws DAOException;
+  List<Categoria> listar() throws DAOException;
+
+  boolean existeCategoria(String descricao) throws DAOException;
 }

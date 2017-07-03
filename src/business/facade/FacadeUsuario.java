@@ -6,6 +6,7 @@ import business.dao.UsuarioDAO;
 import business.model.Usuario;
 import business.model.UsuarioTipo;
 import business.validator.ValidatorUsuario;
+import java.sql.SQLException;
 
 public class FacadeUsuario {
 	private UsuarioDAO dao;
@@ -25,7 +26,11 @@ public class FacadeUsuario {
 		if(ValidatorUsuario.validaEnd(enderecoRua) == false) throw new DAOException("Endere�o inv�lido!");
 		
 		Usuario user = new Usuario(cpfCnpj, usuarioTipo, nome,email, senha, enderecoRua, enderecoNumero);
-		dao.criar(user);
+		try {
+			dao.criar(user);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 
