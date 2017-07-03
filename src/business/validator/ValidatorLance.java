@@ -1,9 +1,8 @@
 package business.validator;
 
-import java.sql.Timestamp;
-
 import business.model.Leilao;
 import business.model.Usuario;
+import java.sql.Timestamp;
 
 public class ValidatorLance {
 	  private Integer codigo;

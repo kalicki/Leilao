@@ -1,14 +1,13 @@
 package business.facade;
 
 import business.action.ProdutoAction;
-import business.action.UsuarioAction;
 import business.dao.DAOException;
 import business.dao.ProdutoDAO;
-import business.dao.UsuarioDAO;
 import business.model.Categoria;
 import business.model.Lote;
 import business.model.Produto;
 import business.validator.ValidatorProduto;
+import java.sql.SQLException;
 
 public class FacadeProduto {
 	private ProdutoDAO dao;
@@ -29,8 +28,12 @@ public class FacadeProduto {
 		if(ValidatorProduto.descricaoDetalhada(descricaoDetalhada)==false) throw new DAOException("descri��o detalhada � inv�lida");
 		if(ValidatorProduto.lote(lote) == false) throw new DAOException("Lote null");
 		
-		Produto produto = new Produto(codigo,descricao,descricaoDetalhada,lote,categoria);
-		dao.criar(produto);
+		Produto produto = new Produto(descricao,descricaoDetalhada,lote,categoria);
+		try {
+			dao.criar(produto);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	

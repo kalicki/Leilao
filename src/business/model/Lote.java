@@ -32,15 +32,15 @@ public class Lote {
     return produto;
   }
 
-  public void setBens(List<Produto> produto) {
+  public void setProduto(List<Produto> produto) {
     this.produto = produto;
   }
 
-  public void addBem(Produto produto) {
+  public void addProduto(Produto produto) {
     this.produto.add(produto);
   }
 
-  public void removeBem(Produto produto) {
+  public void removerProduto(Produto produto) {
     this.produto.remove(produto);
   }
 

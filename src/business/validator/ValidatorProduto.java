@@ -1,7 +1,5 @@
 package business.validator;
 
-import java.io.Console;
-
 import business.model.Categoria;
 import business.model.Lote;
 

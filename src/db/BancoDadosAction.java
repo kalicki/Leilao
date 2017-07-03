@@ -1,7 +1,7 @@
 package db;
 
+import business.action.UsuarioAction;
 import business.dao.DAOException;
-import java.rmi.server.ExportException;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -21,48 +21,34 @@ public class BancoDadosAction implements BancoDadosDAO {
   private static final String[] TABELAS = {"Lances", "Leiloes", "Produtos", "Categorias", "Usuarios"};
   private static Properties PROPRIEDADES = null;
   private Connection conexao = null;
+  private static BancoDadosAction aux;
+
+  public static BancoDadosAction getInstance() throws DAOException {
+    if (aux == null) {
+      aux = new BancoDadosAction();
+    }
+    return aux;
+  }
 
   @Override
-  public boolean obterConexao() throws DAOException {
+  public final Connection obterConexao() throws DAOException {
     if (PROPRIEDADES == null) {
       PROPRIEDADES = new Properties();
     }
 
-    InputStream propriedadesArquivo = (this.getClass().getResourceAsStream(CONFIG_ARQUVIO));
-
-    if (propriedadesArquivo == null) {
-      throw new DAOException("Falha no arquivo '" + CONFIG_ARQUVIO + "' pois não foi enconexaotrado!");
-    }
-
     try {
-      PROPRIEDADES.load(propriedadesArquivo);
+      PROPRIEDADES.load((this.getClass().getResourceAsStream(CONFIG_ARQUVIO)));
     } catch (IOException e) {
       throw new DAOException("Algo de errado com '" + CONFIG_ARQUVIO + "'.", e);
     }
 
     try {
-      Class.forName(PROPRIEDADES.getProperty("driver"));
+      Class.forName(PROPRIEDADES.getProperty("jdbc.driver"));
       conexao = DriverManager.getConnection(
-          PROPRIEDADES.getProperty("url"),
-          PROPRIEDADES.getProperty("username"),
-          PROPRIEDADES.getProperty("password"));
+          PROPRIEDADES.getProperty("jdbc.url"),
+          PROPRIEDADES.getProperty("jdbc.username"),
+          PROPRIEDADES.getProperty("jdbc.password"));
 
-      System.out.println("Conexão Realizada! - Schema: " + conexao.getSchema());
-
-      // Verifica integridade do DB
-      boolean refazerDB = false;
-      for (String tabela: TABELAS) {
-        if (!tabelasExistem(tabela)) {
-          refazerDB = true;
-          break;
-        }
-      }
-      if (refazerDB) {
-        this.apagarBancoDados();
-        this.criarBancoDados();
-      }
-
-      return true;
     } catch (DAOException e) {
       throw new DAOException("Algo deu errado ' = ", e);
     } catch (ClassNotFoundException e) {
@@ -73,16 +59,22 @@ public class BancoDadosAction implements BancoDadosDAO {
       e.printStackTrace();
     }
 
-    return false;
+    return conexao;
   }
 
-  @Override
-  public void fecharConexao() throws DAOException {
+  public final void fecharConexao() throws DAOException {
     try {
       conexao.close();
     } catch (SQLException e) {
       e.printStackTrace();
     }
+  }
+
+  public void iniciarDB() throws Exception {
+    this.obterConexao();
+
+    // Verifica integridade do DB
+    this.criarBancoDados();
   }
 
 
@@ -98,54 +90,61 @@ public class BancoDadosAction implements BancoDadosDAO {
    * @throws Exception
    */
   private void criarBancoDados() throws Exception {
-    System.out.println("Criando DB...");
+    System.out.println("Analisando DB...");
     Statement sql = conexao.createStatement();
 
-    sql.executeUpdate("CREATE TABLE Lances ( "
-        + "codigo INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY(START WITH 1, INCREMENT BY 1) NOT NULL,"
-        + "tempo DATETIME, "
-        + "valor DOUBLE, "
-        + "codigo_usuario INTEGER, "
-        + "codigo_leilao INTEGER ) ");
-
-    sql.executeUpdate("CREATE TABLE Leiloes ( "
-        + "codigo INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY(START WITH 1, INCREMENT BY 1) NOT NULL, "
-        + "leilao_tipo VARCHAR(60), "
-        + "lance_forma VARCHAR(60), "
-        + "tempo_inicio DATETIME, "
-        + "tempo_termino DATETIME, "
-        + "preco DOUBLE, "
-        + "codigo_usuario INTEGER ) ");
-
-    sql.executeUpdate("CREATE TABLE Produtos ( "
-        + "codigo INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY(START WITH 1, INCREMENT BY 1) NOT NULL, "
-        + "descricao VARCHAR(255), "
-        + "descricao_detalhada VARCHAR(255), "
-        + "codigo_categoria INTEGER ) ");
-
-    sql.executeUpdate("CREATE TABLE Categorias ( "
-        + "codigo INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY(START WITH 1, INCREMENT BY 1) NOT NULL, "
-        + "descricao VARCHAR(255) )");
-
-    sql.executeUpdate("CREATE TABLE Usuarios ( "
+    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Usuarios') BEGIN "
+        + "CREATE TABLE Usuarios ( "
         + "cpf_cnpj VARCHAR(18) PRIMARY KEY NOT NULL, "
         + "nome VARCHAR(255) NOT NULL, "
         + "email VARCHAR(255) NOT NULL, "
         + "senha VARCHAR(255) NOT NULL,"
         + "tipo VARCHAR(20) NOT NULL,"
-        + "CONSTRAINT tipo_usuario CHECK  (tipo IN ('Vendedor' , 'Participanete')) ) ");
+        + "endereco_rua VARCHAR(255) NOT NULL,"
+        + "endereco_numero INTEGER NOT NULL,"
+        + "CONSTRAINT tipo_usuario CHECK (tipo IN ('Vendedor', 'Participanete')) ) END ");
 
-    sql.executeUpdate("ALTER TABLE Lances ADD FOREIGN KEY(codigo_usuario) REFERENCES Usuarios (cpf_cnpj) ");
+    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Leiloes') BEGIN "
+        + "CREATE TABLE Leiloes ( "
+        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
+        + "leilao_tipo VARCHAR(60), "
+        + "lance_tipo VARCHAR(60), "
+        + "tempo_inicio DATETIME, "
+        + "tempo_termino DATETIME, "
+        + "valor FLOAT, "
+        + "codigo_usuario VARCHAR(18) REFERENCES Usuarios (cpf_cnpj) ) END ");
 
-    sql.executeUpdate("ALTER TABLE Leiloes ADD FOREIGN KEY(codigo_usuario) REFERENCES Usuarios (cpf_cnpj) ");
+    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Lances') BEGIN "
+        + "CREATE TABLE Lances ( "
+        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL,"
+        + "tempo DATETIME, "
+        + "valor FLOAT, "
+        + "codigo_usuario VARCHAR(18) REFERENCES Usuarios (cpf_cnpj), "
+        + "codigo_leilao INTEGER REFERENCES Leiloes (codigo) ) END ");
 
-    sql.executeUpdate("ALTER TABLE Produtos ADD FOREIGN KEY(codigo_categoria) REFERENCES Categorias (codigo) ");
+    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Categorias') BEGIN "
+        + "CREATE TABLE Categorias ( "
+        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
+        + "descricao VARCHAR(255) ) END ");
+
+    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Produtos') BEGIN  "
+        + "CREATE TABLE Produtos ( "
+        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
+        + "descricao VARCHAR(255), "
+        + "descricao_detalhada VARCHAR(255), "
+        + "codigo_categoria INTEGER REFERENCES Categorias (codigo) ) END ");
+
+    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Lotes') BEGIN  "
+        + "CREATE TABLE Lotes ( "
+        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
+        + "codigo_produto INTEGER REFERENCES Produtos (codigo), "
+        + "codigo_leilao INTEGER REFERENCES Leiloes (codigo) ) END ");
 
     // Fecha conexao
     sql.close();
     conexao.close();
 
-    System.out.println("DB Criado");
+    System.out.println("DB Analisado!!!");
   }
 
   /**
@@ -160,5 +159,6 @@ public class BancoDadosAction implements BancoDadosDAO {
     sql.executeUpdate("DROP TABLE Produtos ");
     sql.executeUpdate("DROP TABLE Categorias ");
     sql.executeUpdate("DROP TABLE Usuarios ");
+    sql.close();
   }
 }

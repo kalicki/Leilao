@@ -13,8 +13,7 @@ public class Produto {
 
   public Produto() {}
 
-  public Produto(Integer codigo, String descricao, String descricaoDetalhada, Lote lote, Categoria categoria) {
-    this.codigo = codigo;
+  public Produto(String descricao, String descricaoDetalhada, Lote lote, Categoria categoria) {
     this.descricao = descricao;
     this.descricaoDetalhada = descricaoDetalhada;
     this.lote = lote;

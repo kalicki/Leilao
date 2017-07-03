@@ -14,7 +14,7 @@ public class Leilao {
 	private LanceTipo lanceTipo;
 	private Timestamp tempoInicio;
 	private Timestamp tempoTermino;
-	private Double preco;
+	private Double valor;
 	private Usuario usuario;
 	private Lote lote;
 	private List<Lance> lances;
@@ -22,13 +22,12 @@ public class Leilao {
 	public Leilao() {
 	}
 
-	public Leilao(Integer codigo, LeilaoTipo leilaoTipo, LanceTipo lanceTipo, Timestamp tempoInicio, Timestamp tempoTermino, Usuario usuario, Integer versao) {
-		this.codigo = codigo;
+	public Leilao(LeilaoTipo leilaoTipo, LanceTipo lanceTipo, Timestamp tempoInicio, Timestamp tempoTermino, Usuario usuario) {
 		this.leilaoTipo = leilaoTipo;
 		this.lanceTipo = lanceTipo;
 		this.tempoInicio = tempoInicio;
 		this.tempoTermino = tempoTermino;
-		this.preco = preco;
+		this.valor = valor;
 		this.usuario = usuario;
 	}
 
@@ -88,12 +87,12 @@ public class Leilao {
 		this.lances.remove(lance);
 	}
 
-	public Double getPreco() {
-		return preco;
+	public Double getValor() {
+		return valor;
 	}
 
-	public void setPreco(Double preco) {
-		this.preco = preco;
+	public void setValor(Double valor) {
+		this.valor = valor;
 	}
 
 	public Usuario getUsuario() {
