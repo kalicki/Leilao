@@ -93,52 +93,53 @@ public class BancoDadosAction implements BancoDadosDAO {
     System.out.println("Analisando DB...");
     Statement sql = conexao.createStatement();
 
-    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Usuarios') BEGIN "
-        + "CREATE TABLE Usuarios ( "
-        + "cpf_cnpj VARCHAR(18) PRIMARY KEY NOT NULL, "
-        + "nome VARCHAR(255) NOT NULL, "
-        + "email VARCHAR(255) NOT NULL, "
-        + "senha VARCHAR(255) NOT NULL,"
-        + "tipo VARCHAR(20) NOT NULL,"
-        + "endereco_rua VARCHAR(255) NOT NULL,"
-        + "endereco_numero INTEGER NOT NULL,"
-        + "CONSTRAINT tipo_usuario CHECK (tipo IN ('Vendedor', 'Participanete')) ) END ");
+    sql.execute("CREATE TABLE IF NOT EXISTS Usuarios ("
+            + "  cpf_cnpj          VARCHAR(18) PRIMARY KEY NOT NULL,"
+            + "  nome              TEXT NOT NULL,"
+            + "  email             TEXT UNIQUE NOT NULL,"
+            + "  senha             TEXT NOT NULL,"
+            + "  endereco_rua      TEXT NOT NULL,"
+            + "  endereco_numero   INT NOT NULL,"
+            + "  tipo              VARCHAR(20) NOT NULL,"
+            + "  CONSTRAINT tipo_usuario CHECK (tipo IN ('Vendedor', 'Participanete'))"
+            + ");"
+            
+            + "CREATE TABLE IF NOT EXISTS Leiloes (\n"
+            + "  codigo          SERIAL PRIMARY KEY,"
+            + "  leilao_tipo     VARCHAR(60),"
+            + "  lance_tipo      VARCHAR(60),"
+            + "  tempo_inicio    TIMESTAMP,"
+            + "  tempo_termino   TIMESTAMP,"
+            + "  valor           REAL,"
+            + "  codigo_usuario VARCHAR(18) REFERENCES Usuarios"
+            + ");"
+            
+            + "CREATE TABLE IF NOT EXISTS Lances (\n"
+            + "  codigo          SERIAL PRIMARY KEY,"
+            + "  tempo           TIMESTAMP,"
+            + "  valor           REAL,"
+            + "  codigo_usuario  VARCHAR(18) REFERENCES Usuarios,"
+            + "  codigo_leilao   INTEGER REFERENCES Leiloes"
+            + ");"
 
-    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Leiloes') BEGIN "
-        + "CREATE TABLE Leiloes ( "
-        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
-        + "leilao_tipo VARCHAR(60), "
-        + "lance_tipo VARCHAR(60), "
-        + "tempo_inicio DATETIME, "
-        + "tempo_termino DATETIME, "
-        + "valor FLOAT, "
-        + "codigo_usuario VARCHAR(18) REFERENCES Usuarios (cpf_cnpj) ) END ");
+            + "CREATE TABLE IF NOT EXISTS Categorias ("
+            + "  codigo      SERIAL PRIMARY KEY,"
+            + "  descricao   TEXT\n"
+            + ");"
 
-    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Lances') BEGIN "
-        + "CREATE TABLE Lances ( "
-        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL,"
-        + "tempo DATETIME, "
-        + "valor FLOAT, "
-        + "codigo_usuario VARCHAR(18) REFERENCES Usuarios (cpf_cnpj), "
-        + "codigo_leilao INTEGER REFERENCES Leiloes (codigo) ) END ");
+            + "CREATE TABLE IF NOT EXISTS Produtos ("
+            + "  codigo                SERIAL PRIMARY KEY,"
+            + "  descricao             VARCHAR(255),"
+            + "  descricao_detalhada   VARCHAR(255),"
+            + "  codigo_categoria      INTEGER REFERENCES Categorias"
+            + ");"
 
-    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Categorias') BEGIN "
-        + "CREATE TABLE Categorias ( "
-        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
-        + "descricao VARCHAR(255) ) END ");
-
-    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Produtos') BEGIN  "
-        + "CREATE TABLE Produtos ( "
-        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
-        + "descricao VARCHAR(255), "
-        + "descricao_detalhada VARCHAR(255), "
-        + "codigo_categoria INTEGER REFERENCES Categorias (codigo) ) END ");
-
-    sql.execute("IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Lotes') BEGIN  "
-        + "CREATE TABLE Lotes ( "
-        + "codigo INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL, "
-        + "codigo_produto INTEGER REFERENCES Produtos (codigo), "
-        + "codigo_leilao INTEGER REFERENCES Leiloes (codigo) ) END ");
+            + "CREATE TABLE IF NOT EXISTS Lotes ("
+            + "  codigo          SERIAL PRIMARY KEY,"
+            + "  codigo_produto  INTEGER REFERENCES Produtos,"
+            + "  codigo_leilao   INTEGER REFERENCES Leiloes"
+            + ");"
+    );
 
     // Fecha conexao
     sql.close();

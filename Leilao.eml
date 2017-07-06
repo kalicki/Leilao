@@ -4,9 +4,7 @@
 	<exclude-output/>
 	<contentEntry url="file://$MODULE_DIR$"/>
 	<levels>
-		<level name="azure" value="project"/>
-		<level name="javafx" value="project"/>
-		<level name="sqljdbc42" value="project"/>
 		<level name="jfoenix" value="project"/>
+		<level name="postgresql-42.1.1" value="project"/>
 	</levels>
 </component>

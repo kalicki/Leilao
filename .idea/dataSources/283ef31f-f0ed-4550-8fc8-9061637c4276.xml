@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="leilao@alphadb01.database.windows.net">
+  <database-model serializer="dbm" rdbms="MSSQL" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="leilao">
+      <ObjectId>6</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+    </database>
+    <schema id="4" parent="2" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2017-07-06.02:23:57.873</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="5" parent="2" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="SalesLT">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <alias-type id="18" parent="4" name="AccountNumber">
+      <TypeId>257</TypeId>
+      <DataType>nvarchar(15)|0</DataType>
+    </alias-type>
+    <alias-type id="19" parent="4" name="Flag">
+      <TypeId>258</TypeId>
+      <DataType>bit|0</DataType>
+      <NotNull>1</NotNull>
+    </alias-type>
+    <alias-type id="20" parent="4" name="Name">
+      <TypeId>259</TypeId>
+      <DataType>nvarchar(50)|0</DataType>
+    </alias-type>
+    <alias-type id="21" parent="4" name="NameStyle">
+      <TypeId>260</TypeId>
+      <DataType>bit|0</DataType>
+      <NotNull>1</NotNull>
+    </alias-type>
+    <alias-type id="22" parent="4" name="OrderNumber">
+      <TypeId>261</TypeId>
+      <DataType>nvarchar(25)|0</DataType>
+    </alias-type>
+    <alias-type id="23" parent="4" name="Phone">
+      <TypeId>262</TypeId>
+      <DataType>nvarchar(25)|0</DataType>
+    </alias-type>
+    <table id="24" parent="4" name="BuildVersion">
+      <ObjectId>1189579276</ObjectId>
+      <CreatedTimestamp>2017-06-08.23:11:10.230</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-08.23:11:15.300</ModifiedTimestamp>
+    </table>
+    <table id="25" parent="4" name="Categorias">
+      <ObjectId>1326627769</ObjectId>
+      <CreatedTimestamp>2017-07-02.22:14:07.713</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.960</ModifiedTimestamp>
+    </table>
+    <table id="26" parent="4" name="ErrorLog">
+      <ObjectId>1221579390</ObjectId>
+      <CreatedTimestamp>2017-06-08.23:11:10.250</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-08.23:11:15.300</ModifiedTimestamp>
+    </table>
+    <table id="27" parent="4" name="Lances">
+      <ObjectId>1262627541</ObjectId>
+      <CreatedTimestamp>2017-07-02.22:14:07.467</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.467</ModifiedTimestamp>
+    </table>
+    <table id="28" parent="4" name="Leiloes">
+      <ObjectId>1214627370</ObjectId>
+      <CreatedTimestamp>2017-07-02.22:14:07.163</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-03.03:26:54.333</ModifiedTimestamp>
+    </table>
+    <table id="29" parent="4" name="Lotes">
+      <ObjectId>1406628054</ObjectId>
+      <CreatedTimestamp>2017-07-03.03:26:54.273</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-03.03:26:54.273</ModifiedTimestamp>
+    </table>
+    <table id="30" parent="4" name="Produtos">
+      <ObjectId>1358627883</ObjectId>
+      <CreatedTimestamp>2017-07-02.22:14:07.947</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-03.03:26:54.273</ModifiedTimestamp>
+    </table>
+    <table id="31" parent="4" name="Usuarios">
+      <ObjectId>1166627199</ObjectId>
+      <CreatedTimestamp>2017-07-02.22:14:06.877</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.470</ModifiedTimestamp>
+    </table>
+    <routine id="32" parent="4" name="ufnGetAllCategories">
+      <ObjectId>901578250</ObjectId>
+      <CreatedTimestamp>2017-06-08.23:11:10.127</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-08.23:11:10.127</ModifiedTimestamp>
+      <RoutineKind>function</RoutineKind>
+      <RoutineType>tab-fun</RoutineType>
+    </routine>
+    <routine id="33" parent="4" name="ufnGetCustomerInformation">
+      <ObjectId>965578478</ObjectId>
+      <CreatedTimestamp>2017-06-08.23:11:10.130</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-08.23:11:10.130</ModifiedTimestamp>
+      <RoutineKind>function</RoutineKind>
+      <RoutineType>tab-fun</RoutineType>
+    </routine>
+    <routine id="34" parent="4" name="ufnGetSalesOrderStatusText">
+      <ObjectId>917578307</ObjectId>
+      <CreatedTimestamp>2017-06-08.23:11:10.127</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-08.23:11:10.127</ModifiedTimestamp>
+      <RoutineKind>function</RoutineKind>
+      <RoutineType>scalar-fun</RoutineType>
+    </routine>
+    <routine id="35" parent="4" name="uspLogError">
+      <ObjectId>402100473</ObjectId>
+      <CreatedTimestamp>2017-06-08.23:11:15.687</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-08.23:11:15.687</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="36" parent="4" name="uspPrintError">
+      <ObjectId>386100416</ObjectId>
+      <CreatedTimestamp>2017-06-08.23:11:15.687</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-08.23:11:15.687</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <column id="37" parent="24" name="SystemInformationID">
+      <Position>1</Position>
+      <DataType>tinyint|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="38" parent="24" name="Database Version">
+      <Position>2</Position>
+      <DataType>nvarchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="24" name="VersionDate">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="24" name="ModifiedDate">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>getdate()</DefaultExpression>
+    </column>
+    <index id="41" parent="24" name="PK__BuildVer__35E58ECAC4056A37">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SystemInformationID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="24" name="PK__BuildVer__35E58ECAC4056A37">
+      <ObjectId>1205579333</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-06-08.23:11:10.230</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-08.23:11:10.230</ModifiedTimestamp>
+      <ColNames>SystemInformationID</ColNames>
+      <UnderlyingIndexName>PK__BuildVer__35E58ECAC4056A37</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="25" name="codigo">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="44" parent="25" name="descricao">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="45" parent="25" name="PK__Categori__40F9A207A477CCE6">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>codigo</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="25" name="PK__Categori__40F9A207A477CCE6">
+      <ObjectId>1342627826</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-02.22:14:07.713</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.713</ModifiedTimestamp>
+      <ColNames>codigo</ColNames>
+      <UnderlyingIndexName>PK__Categori__40F9A207A477CCE6</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="26" name="ErrorLogID">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="26" name="ErrorTime">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>getdate()</DefaultExpression>
+    </column>
+    <column id="49" parent="26" name="UserName">
+      <Position>3</Position>
+      <DataType>sysname|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="26" name="ErrorNumber">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="26" name="ErrorSeverity">
+      <Position>5</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="52" parent="26" name="ErrorState">
+      <Position>6</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="53" parent="26" name="ErrorProcedure">
+      <Position>7</Position>
+      <DataType>nvarchar(126)|0</DataType>
+    </column>
+    <column id="54" parent="26" name="ErrorLine">
+      <Position>8</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="55" parent="26" name="ErrorMessage">
+      <Position>9</Position>
+      <DataType>nvarchar(4000)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="56" parent="26" name="PK_ErrorLog_ErrorLogID">
+      <Position>1</Position>
+      <ColNames>ErrorLogID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="26" name="PK_ErrorLog_ErrorLogID">
+      <ObjectId>1237579447</ObjectId>
+      <CreatedTimestamp>2017-06-08.23:11:10.250</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-08.23:11:10.250</ModifiedTimestamp>
+      <ColNames>ErrorLogID</ColNames>
+      <UnderlyingIndexName>PK_ErrorLog_ErrorLogID</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="27" name="codigo">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="59" parent="27" name="tempo">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="60" parent="27" name="valor">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="61" parent="27" name="codigo_usuario">
+      <Position>4</Position>
+      <DataType>varchar(18)|0</DataType>
+    </column>
+    <column id="62" parent="27" name="codigo_leilao">
+      <Position>5</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="63" parent="27" name="PK__Lances__40F9A20757BEF23A">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>codigo</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="64" parent="27" name="PK__Lances__40F9A20757BEF23A">
+      <ObjectId>1278627598</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-02.22:14:07.470</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.470</ModifiedTimestamp>
+      <ColNames>codigo</ColNames>
+      <UnderlyingIndexName>PK__Lances__40F9A20757BEF23A</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="27" name="FK__Lances__codigo_u__4D2A7347">
+      <ObjectId>1294627655</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-02.22:14:07.470</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.470</ModifiedTimestamp>
+      <ColNames>codigo_usuario</ColNames>
+      <RefTableName>Usuarios</RefTableName>
+      <RefKeyName>PK__Usuarios__F9F7EECE8ECC9639</RefKeyName>
+      <RefColNames>cpf_cnpj</RefColNames>
+    </foreign-key>
+    <foreign-key id="66" parent="27" name="FK__Lances__codigo_l__4E1E9780">
+      <ObjectId>1310627712</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-02.22:14:07.470</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.470</ModifiedTimestamp>
+      <ColNames>codigo_leilao</ColNames>
+      <RefTableName>Leiloes</RefTableName>
+      <RefKeyName>PK__Leiloes__40F9A207776AB631</RefKeyName>
+      <RefColNames>codigo</RefColNames>
+    </foreign-key>
+    <column id="67" parent="28" name="codigo">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="68" parent="28" name="leilao_tipo">
+      <Position>2</Position>
+      <DataType>varchar(60)|0</DataType>
+    </column>
+    <column id="69" parent="28" name="lance_forma">
+      <Position>3</Position>
+      <DataType>varchar(60)|0</DataType>
+    </column>
+    <column id="70" parent="28" name="tempo_inicio">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="71" parent="28" name="tempo_termino">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="72" parent="28" name="preco">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="73" parent="28" name="codigo_usuario">
+      <Position>7</Position>
+      <DataType>varchar(18)|0</DataType>
+    </column>
+    <index id="74" parent="28" name="PK__Leiloes__40F9A207776AB631">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>codigo</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="75" parent="28" name="PK__Leiloes__40F9A207776AB631">
+      <ObjectId>1230627427</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-02.22:14:07.163</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.163</ModifiedTimestamp>
+      <ColNames>codigo</ColNames>
+      <UnderlyingIndexName>PK__Leiloes__40F9A207776AB631</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="76" parent="28" name="FK__Leiloes__codigo___4A4E069C">
+      <ObjectId>1246627484</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-02.22:14:07.163</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.163</ModifiedTimestamp>
+      <ColNames>codigo_usuario</ColNames>
+      <RefTableName>Usuarios</RefTableName>
+      <RefKeyName>PK__Usuarios__F9F7EECE8ECC9639</RefKeyName>
+      <RefColNames>cpf_cnpj</RefColNames>
+    </foreign-key>
+    <column id="77" parent="29" name="codigo">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="78" parent="29" name="codigo_produto">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="79" parent="29" name="codigo_leilao">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="80" parent="29" name="PK__Lotes__40F9A2075FD5909F">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>codigo</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="81" parent="29" name="PK__Lotes__40F9A2075FD5909F">
+      <ObjectId>1422628111</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-03.03:26:54.273</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-03.03:26:54.273</ModifiedTimestamp>
+      <ColNames>codigo</ColNames>
+      <UnderlyingIndexName>PK__Lotes__40F9A2075FD5909F</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="82" parent="29" name="FK__Lotes__codigo_pr__55BFB948">
+      <ObjectId>1438628168</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-03.03:26:54.273</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-03.03:26:54.273</ModifiedTimestamp>
+      <ColNames>codigo_produto</ColNames>
+      <RefTableName>Produtos</RefTableName>
+      <RefKeyName>PK__Produtos__40F9A207B837E080</RefKeyName>
+      <RefColNames>codigo</RefColNames>
+    </foreign-key>
+    <foreign-key id="83" parent="29" name="FK__Lotes__codigo_le__56B3DD81">
+      <ObjectId>1454628225</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-03.03:26:54.273</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-03.03:26:54.273</ModifiedTimestamp>
+      <ColNames>codigo_leilao</ColNames>
+      <RefTableName>Leiloes</RefTableName>
+      <RefKeyName>PK__Leiloes__40F9A207776AB631</RefKeyName>
+      <RefColNames>codigo</RefColNames>
+    </foreign-key>
+    <column id="84" parent="30" name="codigo">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="85" parent="30" name="descricao">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="86" parent="30" name="descricao_detalhada">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="87" parent="30" name="codigo_categoria">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="88" parent="30" name="PK__Produtos__40F9A207B837E080">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>codigo</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="30" name="PK__Produtos__40F9A207B837E080">
+      <ObjectId>1374627940</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-02.22:14:07.947</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.947</ModifiedTimestamp>
+      <ColNames>codigo</ColNames>
+      <UnderlyingIndexName>PK__Produtos__40F9A207B837E080</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="30" name="FK__Produtos__codigo__52E34C9D">
+      <ObjectId>1390627997</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-02.22:14:07.947</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:07.947</ModifiedTimestamp>
+      <ColNames>codigo_categoria</ColNames>
+      <RefTableName>Categorias</RefTableName>
+      <RefKeyName>PK__Categori__40F9A207A477CCE6</RefKeyName>
+      <RefColNames>codigo</RefColNames>
+    </foreign-key>
+    <column id="91" parent="31" name="cpf_cnpj">
+      <Position>1</Position>
+      <DataType>varchar(18)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="31" name="nome">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="31" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="31" name="senha">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="31" name="tipo">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="31" name="endereco_rua">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="97" parent="31" name="endereco_numero">
+      <Position>7</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="98" parent="31" name="PK__Usuarios__F9F7EECE8ECC9639">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cpf_cnpj</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="99" parent="31" name="PK__Usuarios__F9F7EECE8ECC9639">
+      <ObjectId>1182627256</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-07-02.22:14:06.877</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:06.877</ModifiedTimestamp>
+      <ColNames>cpf_cnpj</ColNames>
+      <UnderlyingIndexName>PK__Usuarios__F9F7EECE8ECC9639</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="100" parent="31" name="tipo_usuario">
+      <ObjectId>1198627313</ObjectId>
+      <CreatedTimestamp>2017-07-02.22:14:06.877</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.22:14:06.877</ModifiedTimestamp>
+      <ColNames>tipo</ColNames>
+      <Predicate>[tipo]=&apos;Participanete&apos; OR [tipo]=&apos;Vendedor&apos;</Predicate>
+    </check>
+    <argument id="101" parent="33" name="@CustomerID">
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="102" parent="34">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>Phone|0</DataType>
+    </argument>
+    <argument id="103" parent="34" name="@Status">
+      <DataType>tinyint|0</DataType>
+    </argument>
+    <argument id="104" parent="35" name="@ErrorLogID">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
