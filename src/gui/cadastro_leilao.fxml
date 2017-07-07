@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDialog?>
-<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
 <?import com.jfoenix.controls.JFXToggleButton?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -16,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="544.0" stylesheets="@../../../../../Downloads/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Login">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="544.0" stylesheets="@../../../../../Downloads/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Login">
     <children>
         <GridPane alignment="CENTER" layoutX="121.0" layoutY="-4.0" prefHeight="364.0" prefWidth="302.0">
             <columnConstraints>
@@ -34,18 +30,19 @@
                 <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-            <JFXPasswordField fx:id="tempoTerminoLeilao" labelFloat="true" promptText="Data e Hora Final" GridPane.rowIndex="5" />
-            <JFXTextField fx:id="tempoInicioLeilao" labelFloat="true" promptText="Data e Hora Inicio" GridPane.rowIndex="4" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRO LEILÃO" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Text>
-            <JFXToggleButton fx:id="leilaoTipoLeilao" text="Oferta" toggleColor="#4059a9" toggleLineColor="#7c88ae" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <JFXDialog overlayClose="false" GridPane.rowIndex="3" />
-            <JFXButton fx:id="CriarOnClickLeilao" buttonType="RAISED" minHeight="-Infinity" minWidth="-Infinity" onAction="#entrarOnClick" prefHeight="35.0" prefWidth="119.0" text="CRIAR" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-            <JFXToggleButton fx:id="lanceTipoLeilao" text="Aberto" toggleColor="#4059a9" toggleLineColor="#7c88ae" GridPane.rowIndex="2" />
-            <JFXPasswordField fx:id="precoLeilao" labelFloat="true" promptText="Preço" GridPane.rowIndex="6" />
+            <JFXToggleButton fx:id="tipoLeilao" text="Oferta" toggleColor="#4059a9" toggleLineColor="#7c88ae" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <JFXButton fx:id="CriarOnClickLeilao" buttonType="RAISED" minHeight="-Infinity" minWidth="-Infinity" onAction="#entrarOnClick" prefHeight="35.0" prefWidth="119.0" text="CADASTRAR" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+            <JFXToggleButton fx:id="tipoLance" text="Aberto" toggleColor="#4059a9" toggleLineColor="#7c88ae" GridPane.rowIndex="3" />
+            <JFXDatePicker fx:id="dataInicialLeilao" prefHeight="25.0" prefWidth="122.0" promptText="Data Inicial" GridPane.rowIndex="4" />
+            <JFXTimePicker fx:id="horaInicialLeilao" prefHeight="27.0" prefWidth="133.0" promptText="Hora Inicial" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <JFXDatePicker fx:id="dataTerminoLeilao" prefHeight="25.0" prefWidth="122.0" promptText="Data Termino" GridPane.rowIndex="5" />
+            <JFXTimePicker fx:id="horaTerminoLeilao" prefHeight="27.0" prefWidth="133.0" promptText="Hora Termino" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <JFXTextField fx:id="valorLeilao" labelFloat="true" promptText="Valor (R$)" GridPane.rowIndex="6" />
             </children>
         </GridPane>
     </children>

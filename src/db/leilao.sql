@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS Usuarios (
   endereco_rua      TEXT NOT NULL,
   endereco_numero   INT NOT NULL,
   tipo              VARCHAR(20) NOT NULL,
-  CONSTRAINT tipo_usuario CHECK (tipo IN ('Vendedor', 'Participanete'))
+  CONSTRAINT tipo_check CHECK (tipo IN ('VENDEDOR', 'PARTICIPANTE'))
 );
 
 CREATE TABLE IF NOT EXISTS Leiloes (
@@ -17,6 +17,8 @@ CREATE TABLE IF NOT EXISTS Leiloes (
   tempo_termino   TIMESTAMP,
   valor           REAL,
   codigo_usuario VARCHAR(18) REFERENCES Usuarios
+  CONSTRAINT leilao_check CHECK (leilao_tipo IN ('DEMANDA', 'OFERTA')),
+  CONSTRAINT lance_check CHECK (lance_tipo IN ('ABERTO', 'FECHADO'))
 );
 
 CREATE TABLE IF NOT EXISTS Lances (
@@ -32,17 +34,18 @@ CREATE TABLE IF NOT EXISTS Categorias (
   descricao   TEXT
 );
 
+CREATE TABLE IF NOT EXISTS Lotes (
+  codigo          SERIAL PRIMARY KEY,
+  codigo_leilao   INTEGER REFERENCES Leiloes
+);
+
 CREATE TABLE IF NOT EXISTS Produtos (
   codigo                SERIAL PRIMARY KEY,
   descricao             VARCHAR(255),
   descricao_detalhada   VARCHAR(255),
-  codigo_categoria      INTEGER REFERENCES Categorias
+  codigo_categoria      INTEGER REFERENCES Categorias,
+  codigo_lote           INTEGER REFERENCES Lotes
 );
 
-CREATE TABLE IF NOT EXISTS Lotes (
-  codigo          SERIAL PRIMARY KEY,
-  codigo_produto  INTEGER REFERENCES Produtos,
-  codigo_leilao   INTEGER REFERENCES Leiloes
-);
 
 DROP TABLE Usuarios, Leiloes, Lances, Categorias, Produtos, Lotes;
