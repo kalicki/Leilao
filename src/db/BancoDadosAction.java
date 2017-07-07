@@ -94,7 +94,7 @@ public class BancoDadosAction implements BancoDadosDAO {
     Statement sql = conexao.createStatement();
 
     sql.execute("CREATE TABLE IF NOT EXISTS Usuarios ("
-            + "  cpf_cnpj          VARCHAR(18) PRIMARY KEY NOT NULL,"
+            + "  cpf_cnpj          VARCHAR(18) PRIMARY KEY UNIQUE NOT NULL,"
             + "  nome              TEXT NOT NULL,"
             + "  email             TEXT UNIQUE NOT NULL,"
             + "  senha             TEXT NOT NULL,"
