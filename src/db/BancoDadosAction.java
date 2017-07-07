@@ -112,8 +112,8 @@ public class BancoDadosAction implements BancoDadosDAO {
             + "  tempo_termino   TIMESTAMP,"
             + "  valor           REAL,"
             + "  codigo_usuario VARCHAR(18) REFERENCES Usuarios,"
-            + "  CONSTRAINT tipo_leilao_check CHECK (tipo IN ('DEMANDA', 'OFERTA')),"
-            + "  CONSTRAINT tipo_lance_check  CHECK (tipo IN ('ABERTO', 'FECHADO'))"
+            + "  CONSTRAINT tipo_leilao_check CHECK (leilao_tipo IN ('DEMANDA', 'OFERTA')),"
+            + "  CONSTRAINT tipo_lance_check  CHECK (lance_tipo IN ('ABERTO', 'FECHADO'))"
             + ");"
             
             + "CREATE TABLE IF NOT EXISTS Lances ("
@@ -136,8 +136,8 @@ public class BancoDadosAction implements BancoDadosDAO {
 
             + "CREATE TABLE IF NOT EXISTS Produtos ("
             + "  codigo                SERIAL PRIMARY KEY,"
-            + "  descricao             VARCHAR(255),"
-            + "  descricao_detalhada   VARCHAR(255),"
+            + "  descricao             VARCHAR(180),"
+            + "  descricao_detalhada   TEXT,"
             + "  codigo_categoria      INTEGER REFERENCES Categorias,"
             + "  codigo_lote           INTEGER REFERENCES Lotes"
             + ");"
