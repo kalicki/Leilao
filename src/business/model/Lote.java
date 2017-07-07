@@ -14,6 +14,11 @@ public class Lote {
 
   public Lote() {}
 
+  public Lote(Integer codigo, Leilao leilao) {
+    this.codigo = codigo;
+    this.leilao = leilao;
+  }
+
   public Lote(Integer codigo, List<Produto> produto, Leilao leilao) {
     this.codigo = codigo;
     this.produto = produto;

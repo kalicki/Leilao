@@ -8,18 +8,25 @@ public class ValidatorUsuario {
     return isEmpty(email);
   }
   public static boolean validarNumero(String num) {
+    if (isEmpty(num))
+      return true;
+
     try {
       Integer.parseInt(num);
     } catch (NumberFormatException e) {
-      return false;
+      return true;
     } catch (NullPointerException e) {
-      return false;
+      return true;
     }
-    return true;
+    return false;
   }
 
   public static boolean validarCpfCnpj(String v) {
-    if (v.isEmpty() || v.length() != 11 || v.length() != 14)
+    if (v.isEmpty())
+      return true;
+    else if (v.length() == 11)  // CPF
+      return false;
+    else if (v.length() == 14)  // CNPJ
       return false;
 
     return true;

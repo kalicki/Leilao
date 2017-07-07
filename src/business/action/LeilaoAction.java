@@ -32,14 +32,13 @@ public class LeilaoAction implements LeilaoDAO {
 
     try {
       Connection cone = BancoDadosAction.getInstance().obterConexao();
-      PreparedStatement stmt = cone.prepareStatement("INSERT INTO Leilaos (lance_tipo, leilao_tipo, tempo_inicio, tempo_terminio, valor, codigo_usuario) VALUES (?, ?, ?, ?, ?, ?)", PreparedStatement.RETURN_GENERATED_KEYS);
+      PreparedStatement stmt = cone.prepareStatement("INSERT INTO Leilaos (lance_tipo, leilao_tipo, tempo_inicio, tempo_terminio, codigo_usuario) VALUES (?, ?, ?, ?, ?)", PreparedStatement.RETURN_GENERATED_KEYS);
 
       stmt.setString(1, leilao.getLanceTipo().toString());
       stmt.setString(2, leilao.getLeilaoTipo().toString());
       stmt.setTimestamp(3, leilao.getTempoInicio());
       stmt.setTimestamp(4, leilao.getTempoTermino());
-      stmt.setDouble(5, leilao.getValor());
-      stmt.setString(6, leilao.getUsuario().getCpfCnpj());
+      stmt.setString(5, leilao.getUsuario().getCpfCnpj());
 
       int ret = stmt.executeUpdate();
       if (ret == 0) {
@@ -94,15 +93,14 @@ public class LeilaoAction implements LeilaoDAO {
     try {
       Connection cone= BancoDadosAction.getInstance().obterConexao();
       PreparedStatement stmt = cone.prepareStatement(
-          "UPDATE Leilaos SET lance_tipo = ?, leilao_tipo = ?, tempo_inicio = ?, tempo_terminio = ?, valor = ?, codigo_usuario = ? WHERE codigo = ?"
+          "UPDATE Leilaos SET lance_tipo = ?, leilao_tipo = ?, tempo_inicio = ?, tempo_terminio = ?, codigo_usuario = ? WHERE codigo = ?"
       );
 
       stmt.setString(1, leilao.getLanceTipo().toString());
       stmt.setString(2, leilao.getLeilaoTipo().toString());
       stmt.setTimestamp(3, leilao.getTempoInicio());
       stmt.setTimestamp(4, leilao.getTempoTermino());
-      stmt.setDouble(5, leilao.getValor());
-      stmt.setString(6, leilao.getUsuario().getCpfCnpj());
+      stmt.setString(5, leilao.getUsuario().getCpfCnpj());
 
       int resultado = stmt.executeUpdate();
       if (resultado == 0) {
@@ -117,17 +115,17 @@ public class LeilaoAction implements LeilaoDAO {
   }
 
   @Override
-  public Leilao remover(Leilao categoria) throws DAOException {
+  public Leilao remover(Leilao leilao) throws DAOException {
     try {
       Connection cone= BancoDadosAction.getInstance().obterConexao();
       PreparedStatement stmt = cone.prepareStatement("DELETE FROM Leilaos WHERE codigo =?");
-      stmt.setInt(1, categoria.getCodigo());
+      stmt.setInt(1, leilao.getCodigo());
 
       int alter = stmt.executeUpdate();
       if (alter == 0) {
         throw new DAOException("delecao falhada.");
       } else {
-        categoria.setCodigo(null);
+        leilao.setCodigo(null);
       }
 
     } catch (SQLException ex) {
@@ -136,7 +134,7 @@ public class LeilaoAction implements LeilaoDAO {
       BancoDadosAction.getInstance().fecharConexao();
     }
 
-    return categoria;
+    return leilao;
   }
 
   @Override
@@ -228,7 +226,6 @@ public class LeilaoAction implements LeilaoDAO {
     leilao.setTempoInicio(resultSet.getTimestamp("tempo_inicio"));
     leilao.setTempoTermino(resultSet.getTimestamp("tempo_termino"));
     leilao.setUsuario(usuario);
-    leilao.setValor(resultSet.getDouble("valor"));
 
     return leilao;
   }

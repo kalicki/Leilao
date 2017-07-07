@@ -20,7 +20,6 @@ public class ValidatorLeilao {
 	public static boolean usuario(Usuario user){ return user != null;} // ver isso
 	public static boolean lote(Lote lote){ return lote != null ;} // ver isso
 	public static boolean listaDeLance(List<Lance> lance){ return  lance != null ;} // ver isso
-	public static boolean versao(Integer versao){ return versao > 0;} // ver isso
 
 
 }

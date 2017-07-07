@@ -1,14 +1,7 @@
 package gui;
 
 import business.facade.Facade;
-import business.model.Categoria;
-import business.model.Usuario;
-import business.model.UsuarioTipo;
-import com.jfoenix.controls.JFXAlert;
-import com.jfoenix.controls.JFXDialog;
-import com.jfoenix.controls.JFXDialogLayout;
 import com.jfoenix.controls.JFXToggleButton;
-import com.jfoenix.controls.events.JFXDialogEvent;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,6 +21,9 @@ public class Controle {
   private static Facade fachadaLeilao = new Facade();
   private static final String fxLogin = "xLogin.fxml";
   private static final String fxCadastroUsuario = "xCadastroUsuario.fxml";
+  private static final String fxHome = "xHome.fxml";
+  private static final String fxProduto = "fxCadastroProduto.fxml";
+  private static final String fxLeilao = "fxCadastroLeilao.fxml";
 
   /* Login */
   @FXML private Text alertaLogin;
@@ -49,12 +45,21 @@ public class Controle {
   /* LOGIN */
   @FXML
   public void entrarOnClick(ActionEvent event) {
-    if (usuarioLogin.getText().equalsIgnoreCase("abc") && senhaLogin.getText().equalsIgnoreCase("abc")) {
-      janela.setScene(new Scene(this.templateLogin()));
-      janela.show();
-    } else {
-      alertaLogin.setText("");
+    String cpfCnpj =  usuarioLogin.getText();
+    String senha =  senhaLogin.getText();
+    String tipo = vendedorLogin.getText();
+
+    System.out.println(tipo);
+
+    String resultado = fachadaLeilao.autorizarUsuario(cpfCnpj, senha, tipo);
+
+    if (resultado != null) {
+      alertaLogin.setText(resultado);
+      return;
     }
+
+    // Redirecionar ao login
+    redirecionarHomeOnClick(event);
   }
   @FXML
   public void registrarOnClick(ActionEvent event) {
@@ -82,23 +87,54 @@ public class Controle {
     }
 
     // Retorna ao login
-    alertaCadastro.setText("Cadastro Efetuado!!! Redirecionando para o Login...");
-    try {
-      Thread.sleep(20000);
-
-      janela = (Stage) ((Node) event.getSource()).getScene().getWindow();
-      janela.setScene(new Scene(this.templateLogin()));
-      janela.show();
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+    redirecionarLoginOnClick(event);
   }
 
+  /* HOME */
   @FXML
-  public void voltarCadastroOnClick(ActionEvent event) {
+  public void cadastrarProdutoOnClick(ActionEvent event) {
+    redirecionarProduto(event);
+  }
+  @FXML
+  public void cadastrarLeilaoOnClick(ActionEvent event) {
+    redirecionarLeilao(event);
+  }
+  @FXML
+  public void cadastrarLoteOnClick(ActionEvent event) {
+
+  }
+  @FXML
+  public void realizarLanceOnClick(ActionEvent event) {
+
+  }
+
+  /* GENERAL */
+  @FXML
+  public void redirecionarLoginOnClick(ActionEvent event) {
     janela = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
     janela.setScene(new Scene(this.templateLogin()));
+    janela.show();
+  }
+  @FXML
+  public void redirecionarHomeOnClick(ActionEvent event) {
+    janela = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+    janela.setScene(new Scene(this.templateHome()));
+    janela.show();
+  }
+  @FXML
+  public void redirecionarProduto(ActionEvent event) {
+    janela = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+    janela.setScene(new Scene(this.templateProduto()));
+    janela.show();
+  }
+  @FXML
+  public void redirecionarLeilao(ActionEvent event) {
+    janela = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+    janela.setScene(new Scene(this.templateLeilao()));
     janela.show();
   }
 
@@ -115,6 +151,30 @@ public class Controle {
   private Parent templateCadastro() {
     try {
       return template = FXMLLoader.load(getClass().getResource(fxCadastroUsuario));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+  private Parent templateHome() {
+    try {
+      return template = FXMLLoader.load(getClass().getResource(fxHome));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+  private Parent templateProduto() {
+    try {
+      return template = FXMLLoader.load(getClass().getResource(fxProduto));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+  private Parent templateLeilao() {
+    try {
+      return template = FXMLLoader.load(getClass().getResource(fxLeilao));
     } catch (IOException e) {
       e.printStackTrace();
     }

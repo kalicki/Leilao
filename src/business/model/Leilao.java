@@ -14,7 +14,6 @@ public class Leilao {
 	private LanceTipo lanceTipo;
 	private Timestamp tempoInicio;
 	private Timestamp tempoTermino;
-	private Double valor;
 	private Usuario usuario;
 	private Lote lote;
 	private List<Lance> lances;
@@ -27,7 +26,6 @@ public class Leilao {
 		this.lanceTipo = lanceTipo;
 		this.tempoInicio = tempoInicio;
 		this.tempoTermino = tempoTermino;
-		this.valor = valor;
 		this.usuario = usuario;
 	}
 
@@ -85,14 +83,6 @@ public class Leilao {
 
 	public void removeLance(Lance lance) {
 		this.lances.remove(lance);
-	}
-
-	public Double getValor() {
-		return valor;
-	}
-
-	public void setValor(Double valor) {
-		this.valor = valor;
 	}
 
 	public Usuario getUsuario() {

@@ -1,69 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDialog?>
-<?import com.jfoenix.controls.JFXPasswordField?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXToggleButton?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="544.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controle">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controle">
     <children>
-        <GridPane alignment="CENTER" layoutX="29.0" layoutY="-4.0" prefHeight="465.0" prefWidth="477.0">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="55.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-                <Text fx:id="alertaLogin" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="LEILÃO" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
-               <font>
-                  <Font name="System Bold" size="36.0" />
-               </font>
-            </Text>
-            <JFXDialog overlayClose="false" GridPane.rowIndex="2" />
-            <JFXButton fx:id="addLanceOnClick" buttonType="RAISED" minHeight="-Infinity" minWidth="-Infinity" onAction="#entrarOnClick" prefHeight="35.0" prefWidth="119.0" text="INCLUIR LANCE" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-            <JFXButton fx:id="removeLanceOnClick1" buttonType="RAISED" contentDisplay="RIGHT" minHeight="-Infinity" minWidth="-Infinity" onAction="#entrarOnClick" prefHeight="35.0" prefWidth="150.0" text="CANCELAR LANCE" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Detalhes Leilões" GridPane.rowIndex="2">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Detalhes Lances" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Text>
-            </children>
-        </GridPane>
-      <ScrollPane layoutX="272.0" layoutY="156.0" prefHeight="151.0" prefWidth="233.0">
-         <content>
-          <AnchorPane fx:id="listaLancesLeilao" minHeight="0.0" minWidth="0.0" prefHeight="151.0" prefWidth="213.0" />
-         </content>
-      </ScrollPane>
-      <ScrollPane layoutX="31.0" layoutY="156.0" prefHeight="151.0" prefWidth="233.0">
-         <content>
-            <AnchorPane fx:id="listaLeiloesLeilao" minHeight="0.0" minWidth="0.0" prefHeight="151.0" prefWidth="213.0" />
-         </content>
-      </ScrollPane>
+      <JFXButton fx:id="sairHome" buttonType="RAISED" layoutX="748.0" layoutY="569.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#redirecionarLoginOnClick" prefHeight="35.0" prefWidth="135.0" text="sair" />
+      <Text layoutX="397.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LEILÃO">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <JFXTreeTableView layoutX="15.0" layoutY="115.0" prefHeight="210.0" prefWidth="661.0" />
+      <JFXTreeTableView layoutX="18.0" layoutY="355.0" prefHeight="247.0" prefWidth="660.0" />
+      <JFXButton fx:id="cadastroProduto" layoutX="747.0" layoutY="194.0" onAction="#cadastrarProdutoOnClick" prefHeight="35.0" prefWidth="135.0" text="Cadastrar Produto" />
+      <JFXButton fx:id="cadastrarLeilao" layoutX="747.0" layoutY="109.0" onAction="#cadastrarLeilaoOnClick" prefHeight="35.0" prefWidth="135.0" text="Cadastrar Leilão" />
+      <JFXButton fx:id="cadastrarLote" layoutX="747.0" layoutY="152.0" onAction="#cadastrarLoteOnClick" prefHeight="35.0" prefWidth="135.0" text="Cadastrar Lote" />
+      <JFXButton fx:id="realziarLance" layoutX="744.0" layoutY="354.0" onAction="#realizarLanceOnClick" prefHeight="35.0" prefWidth="134.0" text="Realizar Lance" />
     </children>
 </Pane>

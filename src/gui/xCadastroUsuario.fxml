@@ -38,13 +38,13 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Text>
-            <JFXToggleButton fx:id="vendedorCadastro" text="Vendendor" toggleColor="#4059a9" toggleLineColor="#7c88ae" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+            <JFXToggleButton fx:id="vendedorCadastro" text="Vendedor" toggleColor="#4059a9" toggleLineColor="#7c88ae" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
             <JFXDialog overlayClose="false" GridPane.rowIndex="2" />
             <JFXTextField fx:id="nomeCadastro" labelFloat="true" promptText="Nome" GridPane.rowIndex="2" />
             <JFXTextField fx:id="emailCadastro" labelFloat="true" promptText="Email" GridPane.rowIndex="3" />
             <JFXTextField fx:id="enderecoCadastro" labelFloat="true" promptText="Endereço" GridPane.rowIndex="4" />
             <JFXTextField fx:id="numeroCadastro" labelFloat="true" promptText="Endereço Número" GridPane.rowIndex="5" />
-            <JFXButton fx:id="voltarCadastro" onAction="#voltarCadastroOnClick" text="&lt;&lt; Voltar" GridPane.rowIndex="8" />
+            <JFXButton fx:id="voltarCadastro" onAction="#redirecionarLoginOnClick" text="&lt;&lt; Voltar" GridPane.rowIndex="8" />
             <JFXButton fx:id="criarCadastro" buttonType="RAISED" minHeight="-Infinity" minWidth="-Infinity" onAction="#criarUsuarioOnClick" prefHeight="35.0" prefWidth="119.0" text="CRIAR" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
             <Text fx:id="alertaCadastro" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
             </children>

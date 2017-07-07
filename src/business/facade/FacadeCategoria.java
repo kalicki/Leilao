@@ -8,21 +8,32 @@ import business.validator.ValidatorCategoria;
 import java.sql.SQLException;
 
 public class FacadeCategoria {
-	private CategoriaDAO dao;
+  private CategoriaDAO dao;
 
-	public FacadeCategoria() throws Exception {
-		try {
-			dao = CategoriaAction.getInstance();
-		} catch (Exception e) {
-			throw new Exception("Falha de cria��o da fachada!", e);
-		}
-	}
-		
-	 protected void adicionarCategoria(Integer codigo, String descricao) throws DAOException, SQLException{
-		if(ValidatorCategoria.codigo(codigo)==false) throw new DAOException("C�digo inv�lido");
-		if(ValidatorCategoria.descricao(descricao)==false) throw new DAOException("Descri��o inv�lida");
-		Categoria categoria = new Categoria(codigo, descricao);
-		dao.criar(categoria);
+  public FacadeCategoria() throws Exception {
+    try {
+      dao = CategoriaAction.getInstance();
+    } catch (Exception e) {
+      throw new Exception("Falha de cria��o da fachada!", e);
+    }
+  }
 
-	}
+  protected String adicionarCategoria(String descricao) throws DAOException {
+    if(ValidatorCategoria.descricao(descricao)) return "Descri��o inv�lida";
+    Categoria categoria = new Categoria(descricao);
+
+    try {
+      dao.criar(categoria);
+      return null;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+
+    return null;
+  }
+
+  protected Categoria bucarCategoria(Integer codigo) {
+    Categoria resultado = dao.buscar(codigo);
+    return resultado != null ? resultado : null;
+  }
 }
