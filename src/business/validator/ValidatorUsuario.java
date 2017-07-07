@@ -1,31 +1,35 @@
 package business.validator;
 
-public class ValidatorUsuario
-{
-	public static boolean validaNome(String nome) {
-        return nome.contains(" ");
+public class ValidatorUsuario {
+  public static boolean validarNome(String nome) {
+    return isEmpty(nome);
+  }
+  public static boolean validarEmail(String email) {
+    return isEmpty(email);
+  }
+  public static boolean validarNumero(String num) {
+    try {
+      Integer.parseInt(num);
+    } catch (NumberFormatException e) {
+      return false;
+    } catch (NullPointerException e) {
+      return false;
     }
-    public static boolean validaTelefone(String telefone) {
-        return (telefone.length() == 8);
-    }
-    
-    public static boolean validaCpf(String cpf) {
-        return (cpf.length() == 11);
-    }
-    
-    public static boolean validaCnpj(String cnpj) {
-        return (cnpj.length() == 14);
-    }
-    
-    public static boolean validaEmail(String email) {
-        return email.contains(" ");
-    }
-    
-    public static boolean validaSenha(String senha) {
-        return senha.contains(" ");
-    }
-    
-    public static boolean validaEnd(String end) {
-        return end.contains(" ");
-    }
+    return true;
+  }
+
+  public static boolean validarCpfCnpj(String v) {
+    if (v.isEmpty() || v.length() != 11 || v.length() != 14)
+      return false;
+
+    return true;
+  }
+
+  public static boolean validarSenha(String senha) {
+    return isEmpty(senha);
+  }
+
+  public static boolean isEmpty(String str) {
+    return str.isEmpty();
+  }
 }

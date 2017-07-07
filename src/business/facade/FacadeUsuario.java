@@ -10,28 +10,31 @@ import java.sql.SQLException;
 
 public class FacadeUsuario {
 	private UsuarioDAO dao;
-	
+
 	public FacadeUsuario() throws Exception {
 		try {
-				dao = UsuarioAction.getInstance();
+			dao = UsuarioAction.getInstance();
 		} catch (Exception e) {
-				throw new Exception("Falha de cria��o da fachada!", e);
+			throw new Exception("Falha na criação da fachada", e);
 		}
 	}
-	
-	protected void adicionarUsuario(String cpfCnpj, UsuarioTipo usuarioTipo, String nome, String email, String senha, String enderecoRua, Integer enderecoNumero) throws DAOException{
-		if(ValidatorUsuario.validaNome(nome) == true) throw new DAOException("Nome inv�lido!");
-		if(ValidatorUsuario.validaCnpj(cpfCnpj) == false) throw new DAOException("Cpf ou CNPJ inv�lido!");
-		if(ValidatorUsuario.validaEmail(email) ==  false) throw new DAOException("Email inv�lido!");
-		if(ValidatorUsuario.validaEnd(enderecoRua) == false) throw new DAOException("Endere�o inv�lido!");
-		
-		Usuario user = new Usuario(cpfCnpj, usuarioTipo, nome,email, senha, enderecoRua, enderecoNumero);
+
+	protected String adicionarUsuario(String cpfCnpj, String usuarioTipo, String nome, String email, String senha, String enderecoRua, String enderecoNumero) throws DAOException {
+		if (ValidatorUsuario.validarNome(nome)) 							return "Nome inválido!";
+		if (ValidatorUsuario.validarEmail(email)) 						return "Email inválido!";
+		if (ValidatorUsuario.isEmpty(enderecoRua)) 						return "Endereço inválido!";
+		if (ValidatorUsuario.validarNumero(enderecoNumero)) 	return "Endereço Número inválido!";
+		if (ValidatorUsuario.validarCpfCnpj(cpfCnpj) == false)return "CPF ou CNPJ inválido!";
+		if (ValidatorUsuario.isEmpty(senha)) 									return "Coloque a senha!";
+		UsuarioTipo tipo = usuarioTipo.equalsIgnoreCase("VENDEDOR") ? UsuarioTipo.VENDEDOR : UsuarioTipo.PARTICIPANTE;
+
+		Usuario user = new Usuario(cpfCnpj, tipo, nome, email, senha, enderecoRua, Integer.parseInt(enderecoNumero));
 		try {
 			dao.criar(user);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}
-	
 
+		return null;
+	}
 }

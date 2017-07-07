@@ -18,6 +18,7 @@ public class Usuario {
 
 	public Usuario(String cpfCnpj, UsuarioTipo usuarioTipo, String nome, String email, String senha, String enderecoRua, Integer enderecoNumero) {
 		this.cpfCnpj = cpfCnpj;
+		this.usuarioTipo = usuarioTipo;
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
