@@ -7,3 +7,7 @@ JFXButton {
 JFXButton:hover {
   -fx-background-color: #3442a9;
 }
+
+#alertaLogin, #alertaCadastro {
+  -fx-text-fill: #3442a9;
+}

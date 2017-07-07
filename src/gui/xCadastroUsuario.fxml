@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDialog?>
 <?import com.jfoenix.controls.JFXPasswordField?>
@@ -16,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="531.0" stylesheets="@../../../../../Downloads/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Login">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="531.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controle">
     <children>
         <GridPane alignment="CENTER" layoutX="125.0" layoutY="-4.0" prefHeight="587.0" prefWidth="298.0">
             <columnConstraints>
@@ -36,20 +32,21 @@
             </rowConstraints>
             <children>
             <JFXPasswordField fx:id="senhaCadastro" labelFloat="true" promptText="Senha" GridPane.rowIndex="7" />
-            <JFXTextField fx:id="cpfCnpjCadastro" labelFloat="true" promptText="CPF/CNPJ" GridPane.rowIndex="6" />
+            <JFXTextField fx:id="cpfCnpjCadastro" labelFloat="true" maxWidth="150.0" prefHeight="35.0" prefWidth="50.0" promptText="CPF/CNPJ" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRO" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Text>
-            <JFXToggleButton fx:id="tipoCadastro" text="Vendendor" toggleColor="#4059a9" toggleLineColor="#7c88ae" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="TOP" />
+            <JFXToggleButton fx:id="vendedorCadastro" text="Vendendor" toggleColor="#4059a9" toggleLineColor="#7c88ae" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
             <JFXDialog overlayClose="false" GridPane.rowIndex="2" />
-            <JFXButton fx:id="criarCadastro" buttonType="RAISED" minHeight="-Infinity" minWidth="-Infinity" onAction="#registerOnClick" prefHeight="35.0" prefWidth="119.0" text="CRIAR" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
             <JFXTextField fx:id="nomeCadastro" labelFloat="true" promptText="Nome" GridPane.rowIndex="2" />
             <JFXTextField fx:id="emailCadastro" labelFloat="true" promptText="Email" GridPane.rowIndex="3" />
             <JFXTextField fx:id="enderecoCadastro" labelFloat="true" promptText="Endereço" GridPane.rowIndex="4" />
-            <JFXTextField fx:id="numeroCadastro" labelFloat="true" promptText="Número" GridPane.rowIndex="5" />
-            <Text fx:id="alertaCadastro" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="70.0" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <JFXTextField fx:id="numeroCadastro" labelFloat="true" promptText="Endereço Número" GridPane.rowIndex="5" />
+            <JFXButton fx:id="voltarCadastro" onAction="#voltarCadastroOnClick" text="&lt;&lt; Voltar" GridPane.rowIndex="8" />
+            <JFXButton fx:id="criarCadastro" buttonType="RAISED" minHeight="-Infinity" minWidth="-Infinity" onAction="#criarUsuarioOnClick" prefHeight="35.0" prefWidth="119.0" text="CRIAR" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+            <Text fx:id="alertaCadastro" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
             </children>
         </GridPane>
     </children>
